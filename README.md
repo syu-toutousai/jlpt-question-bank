@@ -45,6 +45,7 @@ JLPT **N2 / N3 / N4 / N5** 过去问的本地资料库：每题存题干、选�
     ├── apply_trynihongo.py    # 抽取答案 → past-exams/（题干+选项双路匹配）
     ├── harvest_pools.py       # jlptzhen 随机池重复采集（每次抽样不同）
     ├── apply_pools.py         # 池题答案 → past-exams/（题干+选项匹配）
+    ├── merge_tryni_pool.py    # 无年份 trynihongo 答案并入池（供 apply_pools 用）
     ├── fetch_jlptzhen.py  # 单页解析器（改编自 N1 仓库）
     └── fetch_jlpt247.py   # 单页解析器（改编自 N1 仓库）
 ```
@@ -83,7 +84,7 @@ python3 tools/apply_trynihongo.py        # 回填答案（可反复跑）
 
 ## 状态（2026-10）
 
-- **正解率**：2570 / 3005（N2 1017/1111・N3 1162/1257・N4 223/304・N5 168/333）。
+- **正解率**：2616 / 3005（N2 1017/1111・N3 1162/1257・N4 225/304・N5 212/333）。
 - trynihongo 抽取已覆盖 N3 2010-2024 全卷；N2 仍在后台进行（`extract_trynihongo.py --shard`）。
 - N3 的 trynihongo 页只转写到読解前（约 38-39 問/回），其后読解答案需其他来源。
 

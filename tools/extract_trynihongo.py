@@ -47,13 +47,27 @@ def parse_session(slug):
     return None
 
 
-def list_pages():
+def parse_undated(slug):
+    """Level + slug-key for undated practice/comprehension pages (N2-N5)."""
+    m = re.search(r"-n([2-5])[-a-z]", slug) or re.search(r"-n([2-5])\d", slug)
+    if not m:
+        return None
+    return f"n{m.group(1)}", re.sub(r"[^a-z0-9-]", "", slug)[:80]
+
+
+def list_pages(include_undated=True):
     out = []
     for f in sorted(TRY_DIR.glob("*.html")):
         slug = f.stem
+        if "nat-test" in slug:
+            continue
         sess = parse_session(slug)
         if sess:
             out.append((sess[0], sess[1], slug, f))
+        elif include_undated:
+            u = parse_undated(slug)
+            if u:
+                out.append((u[0], u[1], slug, f))
     return out
 
 
@@ -172,9 +186,11 @@ def main():
 
     pages = list_pages()
     if args.list:
+        dated = [(lv, s, slug, f) for lv, s, slug, f in pages if len(s) == 7]
+        undated = [(lv, s, slug, f) for lv, s, slug, f in pages if len(s) != 7]
         for lv, sess, slug, f in pages:
             print(f"{lv}-{sess}  {slug}")
-        print(f"total dated pages: {len(pages)}")
+        print(f"total: {len(pages)} (dated {len(dated)}, undated {len(undated)})")
         return
     targets = []
     for idx, (lv, sess, slug, f) in enumerate(pages):
