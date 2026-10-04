@@ -40,6 +40,9 @@ JLPT **N2 / N3 / N4 / N5** 过去问的本地资料库：每题存题干、选�
     ├── collect.py         # sitemap → sessions.json → refs/ 全量下载
     ├── parse_all.py       # refs/ → parsed/（+ manifest.json）
     ├── build_bank.py      # parsed/ → past-exams/（跨源合并答案）
+    ├── extract_trynihongo.py  # 答案逐题判定（--shard k/n 并行；checkpoint 到 refs/answers_trynihongo/）
+    ├── enrich_answer_opts.py  # 从归档 HTML 离线补选项文本
+    ├── apply_trynihongo.py    # 抽取答案 → past-exams/（题干+选项双路匹配）
     ├── fetch_jlptzhen.py  # 单页解析器（改编自 N1 仓库）
     └── fetch_jlpt247.py   # 单页解析器（改编自 N1 仓库）
 ```
@@ -48,7 +51,7 @@ JLPT **N2 / N3 / N4 / N5** 过去问的本地资料库：每题存题干、选�
 
 ```jsonc
 {
-  "id": "2024-07-n2-grammar-composition-01",
+  "id": "2024-07-n2-s08-grammar-composition-01",
   "level": "n2", "year": 2024, "month": 7,
   "section": "問題8", "type": "grammar-composition", "number": 1,
   "question": "…★…", "target": "",
@@ -70,12 +73,21 @@ python3 tools/collect.py --inventory     # 刷新会话清单（读两站 sitema
 python3 tools/collect.py --download      # 增量抓取缺失页面（限速 1.5s）
 python3 tools/parse_all.py               # 解析 refs/ → parsed/
 python3 tools/build_bank.py              # 合并 → past-exams/
+# 答案抽取（N2/N3 有年份的 trynihongo 页，约 6 路并行）
+for k in 1 2 3 4 5 6; do python3 tools/extract_trynihongo.py --shard $k/6 --sleep 0.2 & done
+python3 tools/enrich_answer_opts.py      # 离线补选项（匹配用）
+python3 tools/apply_trynihongo.py        # 回填答案（可反复跑）
 ```
+
+## 状态（2026-10）
+
+- **正解率**：2239 / 3005（N2 818/1111・N3 1032/1257・N4 223/304・N5 166/333）。
+- trynihongo 抽取已覆盖 N3 2010-2024 全卷；N2 仍在后台进行（`extract_trynihongo.py --shard`）。
+- N3 的 trynihongo 页只转写到読解前（约 38-39 問/回），其后読解答案需其他来源。
 
 ## TODO
 
-1. **trynihongo 答案抽取**：`tools/` 加 `extract_trynihongo.py`（改编 N1 仓库的
-   `trynihongo_api.py`），对有年份 N2/N3 全卷页逐题判定正解，回填 `past-exams/` 的読解/並べ替え；
+1. **N2 抽取收尾**：后台 shard 跑完后重跑 `enrich_answer_opts.py` + `apply_trynihongo.py`，再 encrypt；
 2. N4/N5 更多回次：查 jlpt247/jlptzhen/trynihongo 未收录的回次（如 2011-2017 的 N4/N5）；
 3. 听力：归档音频链接与スクリプト（trynihongo listening 页）；
 4. 答案键：收集公开答案汇总（現有 2023-12 N2 一份，见 `refs/answerkey_2023-12_n2.html`）。
