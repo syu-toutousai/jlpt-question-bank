@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# 明文题目数据 —— 绝不提交（版权）。只推送 docs/ 加密站点。
+past-exams/
+parsed/
+refs/
+
+# 本地密钥
+docs/.secret.txt
+
+# OS
+.DS_Store
+*.tmp
+*.log

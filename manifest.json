@@ -1,0 +1,1439 @@
+{
+ "n2/2010-07": {
+  "level": "n2",
+  "session": "2010-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2010-12": {
+  "level": "n2",
+  "session": "2010-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2011-07": {
+  "level": "n2",
+  "session": "2011-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2011-12": {
+  "level": "n2",
+  "session": "2011-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2012-07": {
+  "level": "n2",
+  "session": "2012-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2012-12": {
+  "level": "n2",
+  "session": "2012-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2013-07": {
+  "level": "n2",
+  "session": "2013-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2014-07": {
+  "level": "n2",
+  "session": "2014-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2014-12": {
+  "level": "n2",
+  "session": "2014-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2015-07": {
+  "level": "n2",
+  "session": "2015-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 49,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2015-12": {
+  "level": "n2",
+  "session": "2015-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 49,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2016-07": {
+  "level": "n2",
+  "session": "2016-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2016-12": {
+  "level": "n2",
+  "session": "2016-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2017-07": {
+  "level": "n2",
+  "session": "2017-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 49,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2017-12": {
+  "level": "n2",
+  "session": "2017-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 49,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2018-07": {
+  "level": "n2",
+  "session": "2018-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2018-12": {
+  "level": "n2",
+  "session": "2018-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2019-07": {
+  "level": "n2",
+  "session": "2019-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 47,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2019-12": {
+  "level": "n2",
+  "session": "2019-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 69,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2020-12": {
+  "level": "n2",
+  "session": "2020-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 56,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2021-07": {
+  "level": "n2",
+  "session": "2021-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 0,
+    "sections": [],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2021-12": {
+  "level": "n2",
+  "session": "2021-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2022-07": {
+  "level": "n2",
+  "session": "2022-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2022-12": {
+  "level": "n2",
+  "session": "2022-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2023-07": {
+  "level": "n2",
+  "session": "2023-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 71,
+    "sections": [
+     "問題1",
+     "問題10",
+     "問題11",
+     "問題12",
+     "問題13",
+     "問題14",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7",
+     "問題8",
+     "問題9"
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2023-12": {
+  "level": "n2",
+  "session": "2023-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 0,
+    "sections": [],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2024-07": {
+  "level": "n2",
+  "session": "2024-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 71,
+    "sections": [
+     "問題1",
+     "問題10",
+     "問題11",
+     "問題12",
+     "問題13",
+     "問題14",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7",
+     "問題8",
+     "問題9"
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 101,
+    "sections": [
+     "問題1",
+     "問題10",
+     "問題11",
+     "問題12",
+     "問題13",
+     "問題14",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7",
+     "問題8",
+     "問題9"
+    ],
+    "with_answer": 101
+   }
+  }
+ },
+ "n2/2024-12": {
+  "level": "n2",
+  "session": "2024-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 71,
+    "sections": [
+     "問題1",
+     "問題10",
+     "問題11",
+     "問題12",
+     "問題13",
+     "問題14",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7",
+     "問題8",
+     "問題9"
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2025-07": {
+  "level": "n2",
+  "session": "2025-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 0,
+    "sections": [],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n2/2025-12": {
+  "level": "n2",
+  "session": "2025-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2010-07": {
+  "level": "n3",
+  "session": "2010-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2011-07": {
+  "level": "n3",
+  "session": "2011-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 101,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 101
+   }
+  }
+ },
+ "n3/2011-12": {
+  "level": "n3",
+  "session": "2011-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2012-07": {
+  "level": "n3",
+  "session": "2012-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2012-12": {
+  "level": "n3",
+  "session": "2012-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2013-12": {
+  "level": "n3",
+  "session": "2013-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2014-07": {
+  "level": "n3",
+  "session": "2014-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2014-12": {
+  "level": "n3",
+  "session": "2014-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2015-07": {
+  "level": "n3",
+  "session": "2015-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 58,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2016-07": {
+  "level": "n3",
+  "session": "2016-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2016-12": {
+  "level": "n3",
+  "session": "2016-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2017-07": {
+  "level": "n3",
+  "session": "2017-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 53,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2017-12": {
+  "level": "n3",
+  "session": "2017-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 53,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2018-07": {
+  "level": "n3",
+  "session": "2018-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 58,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2018-12": {
+  "level": "n3",
+  "session": "2018-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 58,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2019-07": {
+  "level": "n3",
+  "session": "2019-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 53,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2019-12": {
+  "level": "n3",
+  "session": "2019-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 51,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2020-12": {
+  "level": "n3",
+  "session": "2020-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 53,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2021-07": {
+  "level": "n3",
+  "session": "2021-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 0,
+    "sections": [],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2021-12": {
+  "level": "n3",
+  "session": "2021-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 73,
+    "sections": [
+     "問題1",
+     "問題10",
+     "問題11",
+     "問題12",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7",
+     "問題8",
+     "問題9"
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2022-07": {
+  "level": "n3",
+  "session": "2022-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2022-12": {
+  "level": "n3",
+  "session": "2022-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 73,
+    "sections": [
+     "問題1",
+     "問題10",
+     "問題11",
+     "問題12",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7",
+     "問題8",
+     "問題9"
+    ],
+    "with_answer": 0
+   }
+  }
+ },
+ "n3/2023-07": {
+  "level": "n3",
+  "session": "2023-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 74,
+    "sections": [
+     "問題1",
+     "問題10",
+     "問題11",
+     "問題12",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7",
+     "問題8",
+     "問題9"
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2023-12": {
+  "level": "n3",
+  "session": "2023-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 0,
+    "sections": [],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2024-07": {
+  "level": "n3",
+  "session": "2024-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 73,
+    "sections": [
+     "問題1",
+     "問題10",
+     "問題11",
+     "問題12",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7",
+     "問題8",
+     "問題9"
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 101,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7"
+    ],
+    "with_answer": 101
+   }
+  }
+ },
+ "n3/2024-12": {
+  "level": "n3",
+  "session": "2024-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 73,
+    "sections": [
+     "問題1",
+     "問題10",
+     "問題11",
+     "問題12",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5",
+     "問題6",
+     "問題7",
+     "問題8",
+     "問題9"
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n3/2025-07": {
+  "level": "n3",
+  "session": "2025-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 0,
+    "sections": [],
+    "with_answer": 0
+   }
+  }
+ },
+ "n3/2025-12": {
+  "level": "n3",
+  "session": "2025-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "?",
+     "問題1",
+     "問題2"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n4/2010-07": {
+  "level": "n4",
+  "session": "2010-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n4/2012-07": {
+  "level": "n4",
+  "session": "2012-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n4/2013-07": {
+  "level": "n4",
+  "session": "2013-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n4/2013-12": {
+  "level": "n4",
+  "session": "2013-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n4/2014-07": {
+  "level": "n4",
+  "session": "2014-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n4/2016-12": {
+  "level": "n4",
+  "session": "2016-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 54,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   }
+  }
+ },
+ "n4/2018-07": {
+  "level": "n4",
+  "session": "2018-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 98,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 98
+   }
+  }
+ },
+ "n4/2018-12": {
+  "level": "n4",
+  "session": "2018-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 0,
+    "sections": [],
+    "with_answer": 0
+   }
+  }
+ },
+ "n4/2025-07": {
+  "level": "n4",
+  "session": "2025-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 27,
+    "sections": [
+     "問題1",
+     "問題2",
+     "問題3",
+     "問題4",
+     "問題5"
+    ],
+    "with_answer": 0
+   }
+  }
+ },
+ "n5/2010-07": {
+  "level": "n5",
+  "session": "2010-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n5/2012-12": {
+  "level": "n5",
+  "session": "2012-12",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n5/2013-07": {
+  "level": "n5",
+  "session": "2013-07",
+  "sources": {
+   "jlptzhen": {
+    "questions": 25,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 25
+   }
+  }
+ },
+ "n5/2016-07": {
+  "level": "n5",
+  "session": "2016-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 56,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   }
+  }
+ },
+ "n5/2016-12": {
+  "level": "n5",
+  "session": "2016-12",
+  "sources": {
+   "jlpt247": {
+    "questions": 55,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   }
+  }
+ },
+ "n5/2017-07": {
+  "level": "n5",
+  "session": "2017-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 56,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   }
+  }
+ },
+ "n5/2018-07": {
+  "level": "n5",
+  "session": "2018-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 56,
+    "sections": [
+     ""
+    ],
+    "with_answer": 0
+   },
+   "jlptzhen": {
+    "questions": 91,
+    "sections": [
+     "?"
+    ],
+    "with_answer": 91
+   }
+  }
+ },
+ "n5/2025-07": {
+  "level": "n5",
+  "session": "2025-07",
+  "sources": {
+   "jlpt247": {
+    "questions": 0,
+    "sections": [],
+    "with_answer": 0
+   }
+  }
+ }
+}

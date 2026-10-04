@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>JLPT N2-N5 過去問データベース</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
+--acc:#0f766e;--acc2:#e6fffa;--ok:#188a52;--okbg:#e9f7ef;--ng:#d33f49;--ngbg:#fdecee;--gold:#b8860b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+background:var(--bg);color:var(--ink);min-height:100vh}
+header{background:linear-gradient(135deg,#134e4a,#0f766e);color:#fff;padding:34px 20px 46px;text-align:center}
+header h1{font-size:25px;letter-spacing:1px}
+header p{opacity:.92;font-size:14px;margin-top:8px}
+header .tags span{display:inline-block;background:rgba(255,255,255,.22);border-radius:99px;
+padding:3px 12px;font-size:12px;margin:12px 5px 0}
+main{max-width:960px;width:100%;margin:-26px auto 0;padding:0 16px 50px}
+.panel{background:var(--card);border-radius:20px;box-shadow:0 6px 24px rgba(30,40,90,.12);padding:24px}
+.lock{max-width:420px;margin:0 auto;text-align:center}
+.lock h2{font-size:18px;margin-bottom:8px}
+.lock p{font-size:13px;color:var(--sub);margin-bottom:16px}
+.lock input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:11px 14px;font-size:15px;outline:none}
+.lock input:focus{border-color:var(--acc)}
+.lock button{margin-top:12px;width:100%;border:none;border-radius:11px;padding:12px;background:var(--acc);
+color:#fff;font-size:15px;font-weight:700;cursor:pointer}
+.lock button:disabled{opacity:.6;cursor:default}
+#err{display:none;margin-top:10px;color:var(--ng);font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{background:var(--acc2);color:var(--acc);border-radius:99px;padding:4px 13px;font-size:12.5px;font-weight:600}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.filters select,.filters input{border:1.5px solid var(--line);border-radius:10px;padding:7px 12px;
+font-size:13px;background:#fff;color:var(--ink);outline:none}
+.filters select:focus,.filters input:focus{border-color:var(--acc)}
+.filters label{font-size:13px;color:var(--sub);display:flex;align-items:center;gap:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.tab{padding:6px 15px;border-radius:99px;font-size:13px;cursor:pointer;border:1.5px solid var(--line);
+background:#fff;color:var(--sub);font-weight:600}
+.tab.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.tab .n{opacity:.7;font-size:11px;margin-left:4px}
+.count{font-size:13px;color:var(--sub);margin:8px 2px 14px}
+.qcard{background:var(--card);border-radius:16px;box-shadow:0 4px 16px rgba(30,40,90,.08);
+padding:18px 20px;border-left:5px solid var(--acc);margin-bottom:16px}
+.qsrc{font-size:12px;color:var(--sub);display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:9px}
+.badge{background:var(--acc2);color:var(--acc);border-radius:99px;padding:2px 10px;font-size:11.5px;font-weight:600}
+.badge.lv{background:#f1f3f8;color:#5b6478}
+.qtext{font-size:16px;line-height:1.9;margin-bottom:12px;white-space:pre-wrap;
+font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif}
+.qtext u{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:#c92a2a}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 13px;border-radius:11px;border:1.5px solid var(--line);
+font-size:14.5px;line-height:1.7;cursor:pointer;background:#fff}
+.opt:hover{border-color:var(--acc)}
+.opt .k{flex:none;width:23px;height:23px;border-radius:50%;background:var(--acc2);color:var(--acc);
+display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:2px}
+.opt.correct{border-color:var(--ok);background:var(--okbg)}
+.opt.correct .k{background:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--ng);background:var(--ngbg);opacity:.85}
+.opt.wrong .k{background:var(--ng);color:#fff}
+.explain{display:none;margin-top:12px;padding:12px 14px;background:#f7f9fd;border-radius:11px;
+font-size:13.5px;line-height:1.8;color:#38405a;border-left:3px solid var(--acc);white-space:pre-wrap}
+.explain.show{display:block}
+footer{text-align:center;color:var(--sub);font-size:12px;padding:12px 0 30px}
+</style>
+</head>
+<body>
+<header>
+  <h1>JLPT N2-N5 過去問データベース</h1>
+  <p>文字・語彙 / 文法 / 読解 — 出典つき・暗号化配信</p>
+  <div class="tags" id="mtags"></div>
+</header>
+<main>
+  <div class="panel lock" id="lock">
+    <h2>🔐 输入访问密码</h2>
+    <p>题目数据以 AES-256-GCM 加密，仅作个人学习用途。</p>
+    <input id="pw" type="password" placeholder="访问密码" autocomplete="off">
+    <button id="unlockBtn">解锁题库</button>
+    <div id="err"></div>
+  </div>
+  <div id="app" style="visibility:hidden">
+    <div class="panel" style="margin-bottom:16px">
+      <div class="chips" id="chips"></div>
+      <div class="tabs" id="tabs"></div>
+      <div class="filters">
+        <select id="fYear"><option value="">全部年份</option></select>
+        <select id="fType"><option value="">全部题型</option></select>
+        <input id="fTag" placeholder="关键词（题干/解析）" style="flex:1;min-width:150px">
+        <label><input type="checkbox" id="selfTest" checked> 自测模式（先选项后答案）</label>
+      </div>
+      <div class="count" id="count"></div>
+      <div id="list"></div>
+    </div>
+  </div>
+</main>
+<footer>jlpt-question-bank · 数据来源：公开学习站点的考生回忆整理 · 保留出处 · 离线/加密</footer>
+
+<script>
+const TYPEMAP={
+ 'vocab-reading':'漢字読み','vocab-writing':'表記','vocab-context':'文脈規定','vocab-paraphrase':'言い換え','vocab-usage':'語彙用法',
+ 'grammar-choice':'文法選択','grammar-composition':'文の並べ替え','grammar-passage':'文章の文法',
+ 'reading-short':'短文読解','reading-mid':'中文読解','reading-long':'長文読解',
+ 'listening-point':'課題理解','listening-grammar':'ポイント理解','listening-overview':'概要理解',
+ 'listening-detailed':'即時応答','listening-implication':'統合理解'
+};
+const LEVEL_LABEL={n2:'N2',n3:'N3',n4:'N4',n5:'N5'};
+const b64toBuf=b=>Uint8Array.from(atob(b),c=>c.charCodeAt(0)).buffer;
+const $=id=>document.getElementById(id);
+let QUESTIONS=[],curLevel='all',curYear='',curType='',curTag='',selfTest=true;
+
+async function boot(){
+  try{
+    const meta=await (await fetch('index-meta.json')).json();
+    $('mtags').innerHTML=`<span>${meta.total} 題</span><span>正解 ${meta.answered}</span><span>${meta.span}</span>`
+      +Object.entries(meta.by_level||{}).map(([k,v])=>`<span>${LEVEL_LABEL[k]||k} ${v}</span>`).join('');
+  }catch(e){}
+  $('unlockBtn').addEventListener('click',go);
+  $('pw').addEventListener('keydown',e=>{if(e.key==='Enter')go();});
+  $('pw').focus();
+}
+async function go(){
+  const pass=$('pw').value.trim(); if(!pass)return;
+  const btn=$('unlockBtn');btn.disabled=true;btn.textContent='解密中…';$('err').style.display='none';
+  try{
+    QUESTIONS=await unlock(pass);
+    $('lock').style.display='none';$('app').style.visibility='visible';
+    buildUI();
+  }catch(E){
+    $('err').textContent=(E.message==='wrong'?'密码错误，请重新输入':'解密失败：'+E.message);
+    $('err').style.display='block';btn.disabled=false;btn.textContent='解锁题库';
+  }
+}
+async function unlock(pass){
+  const bin=await (await fetch('data.json')).json();
+  const salt=b64toBuf(bin.salt),iv=b64toBuf(bin.iv),ct=b64toBuf(bin.ct);
+  const km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pass),'PBKDF2',false,['deriveBits']);
+  const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt,iterations:bin.iter,hash:'SHA-256'},km,256);
+  const key=await crypto.subtle.importKey('raw',bits,{name:'AES-GCM'},false,['decrypt']);
+  let pt;
+  try{pt=await crypto.subtle.decrypt({name:'AES-GCM',iv,additionalData:new TextEncoder().encode('jlpt-n2n5-qb')},key,ct);}
+  catch(e){throw new Error('wrong');}
+  return JSON.parse(new TextDecoder().decode(pt)).questions;
+}
+function buildUI(){
+  const lv={};QUESTIONS.forEach(q=>{lv[q.level]=(lv[q.level]||0)+1;});
+  $('chips').innerHTML=`<span class="chip">总计 ${QUESTIONS.length} 題</span>`+
+    Object.keys(lv).sort().map(l=>`<span class="chip">${LEVEL_LABEL[l]||l} ${lv[l]}</span>`).join('');
+  $('tabs').innerHTML=`<span class="tab on" data-l="all">全部</span>`+
+    Object.keys(lv).sort().map(l=>`<span class="tab" data-l="${l}">${LEVEL_LABEL[l]||l}<span class="n">${lv[l]}</span></span>`).join('');
+  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+    t.classList.add('on');curLevel=t.dataset.l;render();});
+  const years=[...new Set(QUESTIONS.map(q=>q.year))].sort((a,b)=>b-a);
+  $('fYear').innerHTML='<option value="">全部年份</option>'+years.map(y=>`<option>${y}</option>`).join('');
+  const types=[...new Set(QUESTIONS.map(q=>q.type))].sort();
+  $('fType').innerHTML='<option value="">全部题型</option>'+types.map(t=>`<option value="${t}">${TYPEMAP[t]||t}</option>`).join('');
+  $('fYear').onchange=e=>{curYear=e.target.value;render();};
+  $('fType').onchange=e=>{curType=e.target.value;render();};
+  $('fTag').oninput=e=>{curTag=e.target.value.trim().toLowerCase();render();};
+  $('selfTest').onchange=e=>{selfTest=e.target.checked;render();};
+  render();
+}
+function filtered(){
+  return QUESTIONS.filter(q=>{
+    if(curLevel!=='all'&&q.level!==curLevel)return false;
+    if(curYear&&String(q.year)!==curYear)return false;
+    if(curType&&q.type!==curType)return false;
+    if(curTag){
+      const hay=(q.question+' '+(q.target||'')+' '+(q.explanation||'')+' '+(q.source||'')).toLowerCase();
+      if(!hay.includes(curTag))return false;
+    }
+    return true;
+  });
+}
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function card(q){
+  const ans=q.answer; // 1-based or null
+  const opts=(q.options||[]).map((o,i)=>{
+    const k=String.fromCharCode(65+i);
+    return `<div class="opt" data-i="${i}" data-ok="${ans&&i===ans-1?1:0}"><span class="k">${k}</span><span>${esc(o)}</span></div>`;
+  }).join('');
+  const exp=q.explanation?`<div class="explain">${esc(q.explanation)}</div>`:'';
+  const ansBadge=ans?`<span class="badge">正解 ${ans}${q.answer_text?'・'+esc(q.answer_text):''}</span>`:'<span class="badge lv">答案未定</span>';
+  return `<div class="qcard">
+    <div class="qsrc"><span class="badge lv">${LEVEL_LABEL[q.level]||q.level}</span>
+      <span class="badge">${q.year}年${q.month}月</span>
+      <span class="badge">${TYPEMAP[q.type]||q.type}</span>
+      <span>${esc(q.source||'')}</span>${ansBadge}</div>
+    <div class="qtext">${esc(q.question||'').replace(/（\s*）|\(\s*\)/g,'<u>　　</u>')}</div>
+    <div class="opts">${opts}</div>${exp}
+  </div>`;
+}
+function reveal(cardEl){
+  cardEl.querySelectorAll('.opt').forEach(o=>{if(o.dataset.ok==='1')o.classList.add('correct');});
+  const exp=cardEl.querySelector('.explain');if(exp)exp.classList.add('show');
+}
+function render(){
+  const list=filtered();
+  $('count').textContent=`共 ${list.length} 題（正解 ${list.filter(q=>q.answer).length}）`;
+  $('list').innerHTML=list.map(card).join('');
+  document.querySelectorAll('.qcard').forEach(c=>{
+    c.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{
+      if(!selfTest)return;
+      c.querySelectorAll('.opt').forEach(x=>x.classList.remove('wrong'));
+      if(o.dataset.ok==='1')o.classList.add('correct');
+      else{o.classList.add('wrong');c.querySelector('[data-ok="1"]').classList.add('correct');}
+      reveal(c);
+    });
+    if(!selfTest)reveal(c);
+  });
+}
+boot();
+</script>
+</body>
+</html>
