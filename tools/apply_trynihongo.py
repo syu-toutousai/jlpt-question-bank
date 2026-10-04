@@ -69,6 +69,32 @@ def main():
         if not pending:
             continue
         keys = list(solved)
+        tryni_qs = [v for v in ans.values() if v.get("answer_pos")]
+
+        def opt_key(opts):
+            return "|".join(sorted(core(o) for o in opts if core(o)))
+
+        tryni_by_opts = {}
+        for v in tryni_qs:
+            opts = [o for _, o in (v.get("opts") or [])]
+            tryni_by_opts.setdefault(opt_key(opts), v)
+
+        def match_by_options(bank_opts):
+            k = opt_key(bank_opts)
+            if k in tryni_by_opts:
+                return tryni_by_opts[k]
+            best, bv = 0.0, None
+            bset = {core(o) for o in bank_opts if core(o)}
+            for v in tryni_qs:
+                tset = {core(o) for _, o in (v.get("opts") or []) if core(o)}
+                if not bset or not tset:
+                    continue
+                inter = len(bset & tset)
+                jac = inter / len(bset | tset)
+                if jac > best:
+                    best, bv = jac, v
+            return bv if best >= 0.5 else None
+
         sess_m = sess_u = 0
         for f, d in pending:
             c = core(d.get("question", ""))
@@ -87,8 +113,16 @@ def main():
                 if best >= 0.78:
                     v = solved[bk]
             if v is None:
+                v = match_by_options(d.get("options", []))
+            if v is None:
                 continue
             idx = match_option(v.get("answer_text"), d.get("options", []))
+            if idx is None:
+                # option texts can be stored as (id, text) pairs in the tryni dump
+                vtext = v.get("answer_text")
+                if not vtext and v.get("opts"):
+                    vtext = v["opts"][v["answer_pos"] - 1][1] if v.get("answer_pos") else None
+                idx = match_option(vtext, d.get("options", []))
             sess_m += 1
             if idx:
                 d["answer"] = idx
