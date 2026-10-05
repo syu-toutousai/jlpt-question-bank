@@ -95,6 +95,20 @@ python3 tools/apply_trynihongo.py        # 回填答案（可反复跑）
 3. 听力：归档音频链接与スクリプト（trynihongo listening 页）；
 4. 答案键：收集公开答案汇总（現有 2023-12 N2 一份，见 `refs/answerkey_2023-12_n2.html`）。
 
+## 校对（proofread）
+
+```bash
+python3 tools/proofread.py --bank all          # 只扫描出报告
+python3 tools/proofread.py --bank all --apply  # 应用高精度自动修正
+```
+
+覆盖 N1＋N2-N5 全部题目：兼容汉字、站方题号标注、汉字间空格、简体/旧字→日本新字体、
+大つ/大や行→小写、已知混淆对、半角括号归一、开头句点等；不确定的一律只报告不改。
+结果见 [`PROOFREAD.md`](./PROOFREAD.md)（含残留待人工复核清单）。
+
+⚠️ `past-exams/` 是从 `parsed/` 生成的：若重跑 `build_bank.py`，请随后重跑
+`proofread.py --apply`，否则修正会被覆盖。
+
 ## 版权
 
 - JLPT 官方不公开真题；本库内容来自公开学习站点的考生回忆/整理（出处见每题 `source`）。
