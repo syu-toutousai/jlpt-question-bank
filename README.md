@@ -123,6 +123,21 @@ python3 tools/proofread.py --bank all --apply  # 应用高精度自动修正
 ⚠️ `past-exams/` 是从 `parsed/` 生成的：若重跑 `build_bank.py`，请随后重跑
 `proofread.py --apply`，否则修正会被覆盖。
 
+## 出典索引・傾向分析（免密页）
+
+- 免密页：<https://syu-toutousai.github.io/jlpt-question-bank/trends.html>
+  （N1 読解原文出典索引・傾向統計・2026-12 模拟押题第一版；真题正文不入此页）
+- 生成：
+
+  ```bash
+  python3 tools/extract_sources.py   # 読解出典行＋填空/用法 metadata → analysis/source-traces.json
+  python3 tools/build_trends.py      # → docs/trends.html
+  ```
+
+- 出典三层：**読解**＝题面明示的「（〜による）」行（明示 289 / 未詳 369，未詳靠逆引き检索逐步补全）；
+  **填空**（問題2・5・7）与**用法**（問題4）＝作成文（不追外典；用法只统计 target 語 125 語的复现）。
+- 模拟题全部自写并标注「模擬」；绝不冒充真题。
+
 ## 版权
 
 - JLPT 官方不公开真题；本库内容来自公开学习站点的考生回忆/整理（出处见每题 `source`）。
