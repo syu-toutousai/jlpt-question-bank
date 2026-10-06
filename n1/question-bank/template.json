@@ -1,0 +1,16 @@
+{
+  "id": "YYYY-MM-section-type-NN",
+  "year": 0,
+  "month": 0,
+  "section": "vocab",
+  "type": "reading",
+  "number": 1,
+  "question": "",
+  "options": ["", "", "", ""],
+  "answer": "3",
+  "explanation": "",
+  "difficulty": "easy",
+  "tags": [],
+  "source": "JLPT N1 YYYY年MM月",
+  "notes": ""
+}

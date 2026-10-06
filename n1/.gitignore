@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Plaintext question content — NEVER commit (copyright). Encrypted site only.
+past-exams/**/*.json
+question-bank/by-type/**/*.json
+question-bank/by-year/**/*.json
+question-bank/by-theme/**/*.json
+!question-bank/template.json
+
+# Local secrets / generated artifacts
+docs/.secret.txt
+
+# Local-only reference archive (copyrighted PDFs / answer keys / scans) — NEVER push
+refs/*
+!refs/README.md

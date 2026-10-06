@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JLPT N1 题库 · 本地全量版（未加密）</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
+--acc:#4f6ef7;--acc2:#eef1ff;--ok:#1f9d55;--warn:#e8590c;--err:#c92a2a;--c:#7a4ff7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+header{background:linear-gradient(135deg,#33418f,#7a4ff7);color:#fff;padding:36px 20px 46px;text-align:center}
+header h1{font-size:26px;letter-spacing:2px}
+header p{opacity:.92;font-size:14px;margin-top:10px}
+header .tags span{display:inline-block;background:rgba(255,255,255,.22);border-radius:99px;
+padding:3px 12px;font-size:12px;margin:12px 5px 0}
+nav{display:flex;gap:8px;justify-content:center;margin:-20px auto 0;position:relative;z-index:5;
+background:var(--card);padding:10px 14px;border-radius:99px;box-shadow:0 6px 24px rgba(30,40,90,.12);
+width:max-content}
+nav button{border:none;background:transparent;padding:8px 22px;border-radius:99px;font-size:14px;
+font-weight:600;cursor:pointer;color:var(--sub)}
+nav button.on{background:var(--acc);color:#fff}
+main{max-width:1000px;width:100%;margin:18px auto 0;padding:0 16px 40px;flex:1}
+.panel{background:var(--card);border-radius:20px;box-shadow:0 6px 24px rgba(30,40,90,.12);padding:22px 24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.chip{background:var(--acc2);color:var(--acc);border-radius:99px;padding:4px 14px;font-size:12.5px;font-weight:600}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:6px}
+.filters select,.filters input,.filters button{border:1.5px solid var(--line);border-radius:10px;
+padding:7px 12px;font-size:13px;background:#fff;color:var(--ink);outline:none}
+.tabsq{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+.tabq{padding:6px 16px;border-radius:99px;font-size:13px;cursor:pointer;border:1.5px solid var(--line);
+background:#fff;color:var(--sub);font-weight:600;transition:.15s}
+.tabq.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.tabq .n{opacity:.7;font-size:11px;margin-left:4px}
+.count{font-size:13px;color:var(--sub);margin:10px 2px 14px}
+.qlist{display:flex;flex-direction:column;gap:16px}
+.qcard{background:var(--card);border-radius:16px;box-shadow:0 4px 16px rgba(30,40,90,.08);
+padding:18px 20px;border-left:5px solid var(--c)}
+.qsrc{font-size:12px;color:var(--sub);display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:9px}
+.badge{background:var(--acc2);color:var(--acc);border-radius:99px;padding:2px 10px;font-size:11.5px;font-weight:600}
+.badge.d0{background:#f6e9ff;color:#8b2ec4}.badge.d1{background:#fff1e3;color:#c2410c}.badge.d2{background:#ffe3e3;color:#c92a2a}
+.qtext{font-size:16px;line-height:1.9;margin-bottom:14px;white-space:pre-wrap}
+.qtext u{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:#c92a2a;font-weight:700}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border-radius:11px;border:1.5px solid var(--line);
+font-size:14.5px;line-height:1.7;cursor:pointer;transition:.12s;background:#fff}
+.opt:hover{border-color:var(--acc)}
+.opt .k{flex:none;width:24px;height:24px;border-radius:50%;background:var(--acc2);color:var(--acc);
+display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:2px}
+.opt.pick{border-color:var(--warn);background:#fff8f2}
+.opt.pick .k{background:var(--warn);color:#fff}
+.opt.correct{border-color:var(--ok);background:#f2fbf5}
+.opt.correct .k{background:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--err);background:#fff5f5;opacity:.85}
+.opt.wrong .k{background:var(--err);color:#fff}
+.explain{display:none;margin-top:13px;padding:12px 14px;background:#f7f9fd;border-radius:11px;font-size:13.5px;
+line-height:1.8;color:#38405a;border-left:3px solid var(--acc)}
+.explain b{color:var(--acc)}
+.explain.show{display:block}
+.extw{color:var(--warn)!important;font-weight:700;border-bottom:1.5px dashed var(--warn);text-decoration:none;cursor:pointer}
+.extw:hover{background:#fff8f2}
+.extm{margin-left:auto;display:flex;align-items:center;gap:8px}
+.ext{color:#fff;background:var(--c)!important;border-radius:99px;padding:3px 14px;font-size:11.5px;font-weight:700;
+text-decoration:none;border:1.5px solid var(--c);transition:.15s;white-space:nowrap}
+.ext:hover{opacity:.85}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tags span{background:#f0f1f7;color:var(--sub);border-radius:99px;padding:2px 10px;font-size:11.5px}
+.empty{padding:60px 20px;text-align:center;color:var(--sub)}
+.switch{display:inline-flex;align-items:center;gap:8px;margin-left:auto;font-size:13px;color:var(--sub);cursor:pointer}
+.ck{width:38px;height:20px;border-radius:99px;background:var(--line);position:relative;transition:.15s;flex:none}
+.ck i{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:.15s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.ck.on{background:var(--acc)} .ck.on i{left:20px}
+footer{text-align:center;font-size:12px;color:var(--sub);padding:18px;line-height:1.8}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;background:#fff}
+th{background:var(--acc2);color:var(--acc)}
+tr td:first-child{font-weight:600}
+.tree{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px}
+.tree .row{cursor:pointer;padding:3px 6px;border-radius:6px;display:flex;gap:8px;align-items:center}
+.tree .row:hover{background:var(--acc2)}
+.tree .dir{font-weight:600;color:#33418f}
+.tree .txt{color:#1971c2}
+.tree .bin{color:#868e96}
+.tree .sz{color:#a8aebc;font-size:11px;margin-left:auto}
+.tree ul{list-style:none;padding-left:20px}
+.print{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.7;
+background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:10px}
+.view-title{font-size:15px;font-weight:700;margin-bottom:4px;word-break:break-all}
+</style>
+</head>
+<body>
+<header>
+  <h1>JLPT N1 ・ 過去問データベース（本地全量版）</h1>
+  <p>未加密 · 全量展示本 repo 内容 · 仅供本地录入/校对/浏览</p>
+  <div class="tags"><span id="mspan">收录年份 -</span><span id="mcount">加载中…</span><span>localhost · 透明</span></div>
+</header>
+
+<nav id="nav">
+  <button class="on" data-v="bank">题库练习</button>
+  <button data-v="stats">统计</button>
+  <button data-v="material">学习材料</button>
+  <button data-v="files">仓库浏览</button>
+</nav>
+
+<main>
+  <div id="view-bank" class="view">
+    <div class="panel">
+      <div class="chips" id="schips"></div>
+      <div class="filters">
+        <select id="fYear"><option value="">全部年份</option></select>
+        <select id="fType"><option value="">全部题型</option></select>
+        <input id="fTag" placeholder="搜索题目 / 标签 / 考点…" style="flex:1;min-width:180px">
+        <label class="switch" title="自测模式：作答后才显示答案与解析">
+          <span>自测模式</span><span class="ck" id="modeCk"><i></i></span>
+        </label>
+      </div>
+      <div class="tabsq" id="tabs"></div>
+      <div class="count" id="count"></div>
+    </div>
+    <div class="qlist" id="qlist" style="margin-top:18px"></div>
+    <div class="empty" id="empty" style="display:none">没有符合条件的题目</div>
+  </div>
+
+  <div id="view-stats" class="view" style="display:none">
+    <div class="panel" id="statsBox"></div>
+  </div>
+
+  <div id="view-material" class="view" style="display:none">
+    <div class="panel" style="padding:12px">
+      <iframe id="matFrame" src="docs/vocab-words.html" style="width:100%;min-height:78vh;border:0;border-radius:12px;background:#fff"></iframe>
+    </div>
+  </div>
+
+  <div id="view-files" class="view" style="display:none">
+    <div class="panel">
+      <div style="display:flex;gap:20px">
+        <div class="tree" id="tree" style="flex:1"></div>
+        <div style="flex:2;min-width:0">
+          <div class="view-title" id="fileTitle">（点击左侧文件预览；md/json/txt 可读）</div>
+          <div class="print" id="fileContent" style="max-height:70vh;overflow:auto"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>本地开发服务器 · 全量明文 · 与线上加密版数据同源（docs/ 由 encrypt.py 生成）</footer>
+
+<script>
+const SECTION_LABEL={vocab:'語彙',grammar:'文法',reading:'読解',listening:'聴解'};
+const SECTION_COLOR={vocab:'#e8590c',grammar:'#2f9e44',reading:'#1971c2',listening:'#e03131'};
+const TYPEMAP={
+ 'vocab-reading':'読み方(文字)','vocab-context':'文脈規定(語彙)','vocab-paraphrase':'言い換え','vocab-usage':'語彙用法',
+ 'grammar-usage':'文脈規定(文法)','grammar-choice':'文法選択','grammar-composition':'文の並べ替え',
+ 'reading-short':'短文読解','reading-mid':'中文読解','reading-long':'長文読解',
+ 'listening-point':'課題理解','listening-grammar':'要点理解','listening-overview':'概要理解',
+ 'listening-detailed':'即時応答','listening-implication':'統合理解'
+};
+const DIFF={easy:['d0','易'],medium:['d1','中'],hard:['d2','難']};
+const $=id=>document.getElementById(id);
+let QUESTIONS=[],META={};
+let curSection='all',curYear='',curType='',curTag='',selfTest=true;
+
+function ansIndex(a){a=String(a||'').toUpperCase();
+ if(/^[1-4]$/.test(a))return Number(a)-1;
+ if(/^[A-D]$/.test(a))return a.charCodeAt(0)-65;return -1;}
+
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  document.querySelectorAll('.view').forEach(v=>v.style.display='none');
+  $('view-'+b.dataset.v).style.display='block';
+  if(b.dataset.v==='stats')renderStats();
+  if(b.dataset.v==='files')loadTree();
+});
+
+async function boot(){
+  try{
+    const d=await (await fetch('/api/questions')).json();
+    QUESTIONS=d.questions||[];META=d.meta||{};
+    const years=Object.keys(META.by_year||{}).sort();
+    $('mspan').textContent=(years.length?'收录 '+years[0]+'–'+years[years.length-1]:'收录日期 -');
+    $('mcount').textContent=META.total+' 題';
+    buildBank();
+  }catch(e){
+    $('mcount').textContent='加载失败';
+  }
+}
+
+function applyFilters(q){
+  if(curSection!=='all'&&q.section!==curSection)return false;
+  if(curYear&&String(q.year)!==curYear)return false;
+  if(curType&&(q.section+'-'+q.type)!==curType)return false;
+  if(curTag){
+    const hay=(q.question+' '+(q.tags||[]).join(' ')+' '+(q.explanation||'')).toLowerCase();
+    if(!hay.includes(curTag.toLowerCase()))return false;
+  }
+  return true;
+}
+
+function buildBank(){
+  const sec={};
+  QUESTIONS.forEach(q=>{sec[q.section]=(sec[q.section]||0)+1;});
+  const colors=SECTION_COLOR;
+  $('schips').innerHTML=`<span class="chip" style="color:#7a4ff7">总计 ${QUESTIONS.length} 題</span>`+
+    Object.keys(sec).map(s=>`<span class="chip" style="color:${colors[s]}">${SECTION_LABEL[s]||s} ${sec[s]}</span>`).join('');
+  const years=[...new Set(QUESTIONS.map(q=>q.year))].sort((a,b)=>b-a);
+  $('fYear').innerHTML='<option value="">全部年份</option>'+years.map(y=>`<option>${y}</option>`).join('');
+  const types=[...new Set(QUESTIONS.map(q=>q.section+'-'+q.type))].sort();
+  $('fType').innerHTML='<option value="">全部题型</option>'+types.map(t=>`<option value="${t}">${TYPEMAP[t]||t}</option>`).join('');
+  $('tabs').innerHTML=`<span class="tabq on" data-s="all">全部</span>`+
+    Object.keys(sec).map(s=>`<span class="tabq" data-s="${s}">${SECTION_LABEL[s]||s}<span class="n">${sec[s]}</span></span>`).join('');
+  document.querySelectorAll('.tabq').forEach(t=>t.onclick=()=>{
+    document.querySelectorAll('.tabq').forEach(x=>x.classList.remove('on'));
+    t.classList.add('on');curSection=t.dataset.s;render();
+  });
+  $('fYear').onchange=e=>{curYear=e.target.value;render();};
+  $('fType').onchange=e=>{curType=e.target.value;render();};
+  $('fTag').oninput=e=>{curTag=e.target.value.replace(/^\s+|\s+$/g,'');render();};
+  $('modeCk').onclick=()=>{selfTest=!selfTest;$('modeCk').classList.toggle('on',selfTest);render();};
+  $('modeCk').classList.add('on');
+  render();
+}
+
+function card(q){
+  const src=`${q.year}年${q.month}月 · ${SECTION_LABEL[q.section]||q.section} · ${TYPEMAP[q.section+'-'+q.type]||q.type} · 第${q.number}題`;
+  const d=DIFF[q.difficulty]||DIFF.medium;
+  const tags=(q.tags||[]).map(t=>`<span>#${t}</span>`).join('');
+  const isMat= q.year===2024 && q.month===7 && q.section==='vocab'
+    && ((q.type==='reading' && [1,2,3,4,5,6].indexOf(Number(q.number))>-1)
+     || (q.type==='context' && [7,8,9,10,11,12,13].indexOf(Number(q.number))>-1));
+  const ext= isMat?`<a class="ext" href="docs/vocab-words.html#q${q.number}" target="_blank" title="跳转到对应小问的学习材料">📖 扩展</a>`:'';
+  const opts=(q.options||[]).map((o,i)=>
+    `<div class="opt" data-i="${i}" data-ok="${ansIndex(q.answer)===i?1:0}">`+
+    `<span class="k">${i+1}</span><span class="tx">${o||''}</span></div>`).join('');
+  const div=document.createElement('div');
+  div.className='qcard'; div.style.setProperty('--c',SECTION_COLOR[q.section]||'#7a4ff7');
+  div.innerHTML=
+    `<div class="qsrc"><span class="badge">${src}</span>`+
+    `<span class="badge ${d[0]}">难度·${d[1]}</span>`+
+    (q.verified?`<span class="badge" style="background:#e3fae9;color:#1f7a43">${q.verified.status==='matched'?'✅已校':'⚠'+q.verified.status}</span>`:'')+
+    `<span class="extm">${ext}</span></div>`+
+    `<div class="qtext">${targetHtml(q.question,q.target,isMat)}</div>`+
+    `<div class="opts">${opts}</div>`+
+    `<div class="explain"><b>答案 ${q.answer||'?'}</b>　${escapeHtml(q.explanation||'')}</div>`+
+    (tags?`<div class="tags">${tags}</div>`:'')+
+    `<div class="qsrc" style="margin-top:10px;margin-bottom:0">${escapeHtml(q.source||'')}</div>`;
+  if(!selfTest){
+    div.querySelector('.explain').classList.add('show');
+    div.querySelectorAll('.opt').forEach(o=>{if(o.dataset.ok=='1')o.classList.add('correct');});
+  }else{
+    div.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{
+      if(div.dataset.done)return; div.dataset.done='1'; o.classList.add('pick');
+      const ans=div.querySelector(`.opt[data-ok="1"]`);
+      setTimeout(()=>{o.classList.remove('pick');
+        if(ans!==o)o.classList.add('wrong'); ans.classList.add('correct');
+        const ex=div.querySelector('.explain');ex.classList.add('show');
+      },350);
+    }));
+  }
+  return div;
+}
+
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+function targetHtml(text,target,link){
+  let s=escapeHtml(text||'');
+  if(!target) return s;
+  const t=escapeHtml(target);
+  const r=new RegExp(t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+  if(link) return s.replace(r, `<a class="extw" href="docs/vocab-words.html#w-${encodeURIComponent(target)}" target="_blank" title="查看词条卡片"><u>${t}</u></a>`);
+  return s.replace(r, `<u>${t}</u>`);
+}
+
+function render(){
+  const list=QUESTIONS.filter(applyFilters);
+  $('count').textContent=`显示 ${list.length} / ${QUESTIONS.length} 题`;
+  $('qlist').innerHTML=''; $('empty').style.display=list.length?'none':'block';
+  const frag=document.createDocumentFragment();
+  list.forEach(q=>frag.appendChild(card(q)));
+  $('qlist').appendChild(frag);
+}
+
+function renderStats(){
+  const cards=(label,obj,color)=>`<div class="chip" style="color:${color}">${label} ${Object.keys(obj).length}</div>`+
+    '<table><tr><th>项</th><th>题数</th></tr>'+Object.entries(obj).sort((a,b)=>b[1]-a[1])
+    .map(([k,v])=>`<tr><td>${escapeHtml(k)}</td><td>${v}</td></tr>`).join('')+'</table>';
+  $('statsBox').innerHTML=
+    `<div class="chips"><span class="chip" style="color:#7a4ff7">总计 ${QUESTIONS.length} 題</span></div>`+
+    '<h3 style="margin:6px 0">按 年份</h3>'+cards('年份',META.by_year||{},'#1971c2')+
+    '<h3 style="margin:18px 0 6px">按 板块</h3>'+cards('板块',META.by_section||{},'#e8590c')+
+    '<h3 style="margin:18px 0 6px">按 题型</h3>'+cards('题型',META.by_type||{},'#2f9e44')+
+    '<h3 style="margin:18px 0 6px">按 难度</h3>'+cards('难度',META.by_difficulty||{},'#8b2ec4');
+}
+
+async function loadTree(){
+  const root=$('tree');
+  if(root.dataset.loaded)return; root.dataset.loaded='1';
+  const d=await (await fetch('/api/tree')).json();
+  root.innerHTML='<ul>'+treeHtml(d.tree)+'</ul>';
+  root.querySelectorAll('.row[data-rel]').forEach(row=>row.onclick=()=>openFile(row.dataset.rel));
+}
+function treeHtml(node){
+  if(node.type==='dir'){
+    const kids=(node.children||[]).map(treeHtml).join('');
+    return `<li><div class="row dir"><span>📁</span>${escapeHtml(node.name)}</div><ul>${kids}</ul><li>`;
+  }
+  const sz=node.bytes>1024?(node.bytes/1024).toFixed(1)+'K':node.bytes+'B';
+  return `<li><div class="row ${node.type}" data-rel="${escapeHtml(node.rel)}"><span>${node.type==='text'?'📄':'🎴'}</span>${escapeHtml(node.name)}<span class="sz">${sz}</span></div></li>`;
+}
+async function openFile(rel){
+  $('fileTitle').textContent=rel;
+  const d=await (await fetch('/api/file?path='+encodeURIComponent(rel))).json();
+  if(!d.ok){$('fileContent').textContent='无法预览：'+(d.error||'');return;}
+  if(rel.endsWith('.json'))$('fileContent').textContent=fmtJson(d.content);
+  else if(rel.endsWith('.md'))$('fileContent').innerHTML=md(d.content);
+  else $('fileContent').textContent=d.content;
+}
+function fmtJson(s){try{return JSON.stringify(JSON.parse(s),null,2);}catch(e){return s;}}
+function md(s){
+  const esc=s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const rows=esc.split(/\r?\n/);const out=[];
+  let inCode=false,code=[],inTable=false,table=[];
+  const flushTable=()=>{if(table.length){out.push('<table>'+table.map((r,i)=>'<tr>'+r.split('|').map(c=>`<td>${c.trim()||''}</td>`).join('')+'</tr>').join('')+'</table>');table=[];}};
+  for(let raw of rows){
+    const line=raw;
+    if(line.startsWith('```')){flushTable();if(inCode){out.push('<pre class="print">'+code.join('\n')+'</pre>');code=[];inCode=false;}else inCode=true;continue;}
+    if(inCode){code.push(line);continue;}
+    if(/^\s*\|/.test(line)){if(!inTable){flushTable();inTable=true;}table.push(line);continue;}
+    if(inTable){inTable=false;flushTable();}
+    let s=line.replace(/^#(#{1,5})\s+/,m=>{const l=m.length;return `${'#'.repeat(6-l)} `;});
+    if(s.startsWith('#######'))s=s.slice(7);
+    if(/^#{1,6}\s/.test(s)){const h=s.match(/^(#{1,6})\s*(.*)/);out.push(`<b style="font-size:${22-h[1].length}px">${h[2]}</b>`);continue;}
+    if(/^\s*[-*]\s+/.test(s)){out.push('<div>• '+s.replace(/^\s*[-*]\s+/,'')+'</div>');continue;}
+    if(/^\s*\d+\.\s+/.test(s)){out.push('<div>'+s+'</div>');continue;}
+    if(!line.trim()){out.push('<div style="height:8px"></div>');continue;}
+    out.push('<div>'+s+'</div>');
+  }
+  flushTable();if(inCode)out.push('<pre class="print">'+code.join('\n')+'</pre>');
+  return out.join('');
+}
+
+boot();
+</script>
+</body>
+</html>
