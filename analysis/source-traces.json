@@ -18,7 +18,10 @@
     "2021-12-reading-long-59",
     "2021-12-reading-long-60",
     "2021-12-reading-long-61"
-   ]
+   ],
+   "raw": "二郎『現代の哲学』",
+   "suspicious": true,
+   "suspicious_note": "著者名が短すぎる（姓氏欠落の可能性）"
   },
   {
    "year": 2020,
@@ -29,7 +32,8 @@
     "2020-12-reading-long-64",
     "2020-12-reading-long-65",
     "2020-12-reading-long-66"
-   ]
+   ],
+   "raw": "山田ズーニー『あなたの話はなぜ「通じない」のか』"
   },
   {
    "year": 2016,
@@ -40,7 +44,8 @@
     "2016-12-reading-long-60",
     "2016-12-reading-long-61",
     "2016-12-reading-long-62"
-   ]
+   ],
+   "raw": "加藤美浩『まちづくりのススメ』"
   },
   {
    "year": 2016,
@@ -49,18 +54,22 @@
    "ids": [
     "2016-12-reading-long-63",
     "2016-12-reading-long-64"
-   ]
+   ],
+   "raw": "多湖輝『人の心をつかむ「雑談力」情報が集まる「雑談力」』"
   },
   {
    "year": 2016,
    "month": 12,
-   "source": "内藤広『建築のはじまりに向かって』",
+   "source": "内藤廣『建築のはじまりに向かって』",
    "ids": [
     "2016-12-reading-long-65",
     "2016-12-reading-long-66",
     "2016-12-reading-long-67",
     "2016-12-reading-long-68"
-   ]
+   ],
+   "raw": "内藤広『建築のはじまりに向かって』",
+   "corrected": true,
+   "evidence": "「広」→正字「廣」（Amazon・王国社書誌）"
   },
   {
    "year": 2016,
@@ -70,7 +79,8 @@
     "2016-12-reading-mid-50",
     "2016-12-reading-mid-51",
     "2016-12-reading-mid-52"
-   ]
+   ],
+   "raw": "稲垣栄洋『弱者の戦略』"
   },
   {
    "year": 2016,
@@ -80,7 +90,8 @@
     "2016-12-reading-mid-53",
     "2016-12-reading-mid-54",
     "2016-12-reading-mid-55"
-   ]
+   ],
+   "raw": "大林宣彦『父の失恋娘の結婚―べそっかきの幸福そうな顔』"
   },
   {
    "year": 2016,
@@ -90,7 +101,10 @@
     "2016-12-reading-mid-56",
     "2016-12-reading-mid-57",
     "2016-12-reading-mid-58"
-   ]
+   ],
+   "raw": "YOMIURI ONLINE2010年3月7日取得",
+   "suspicious": true,
+   "suspicious_note": "取得日時の転写崩れの可能性"
   },
   {
    "year": 2016,
@@ -98,7 +112,8 @@
    "source": "徳井厚子『日本語教師の「衣」再考―多文化共生への課題』",
    "ids": [
     "2016-12-reading-short-46"
-   ]
+   ],
+   "raw": "徳井厚子『日本語教師の「衣」再考―多文化共生への課題』"
   },
   {
    "year": 2016,
@@ -106,7 +121,8 @@
    "source": "ARCLE編集委員会・田中茂範・アレン玉井光江・根岸雅史・吉田研作編著『幼児から成人まで一貫した英語教育のための枠組み―ECF-English Curriculum Framework』",
    "ids": [
     "2016-12-reading-short-48"
-   ]
+   ],
+   "raw": "ARCLE編集委員会・田中茂範・アレン玉井光江・根岸雅史・吉田研作編著『幼児から成人まで一貫した英語教育のための枠組み―ECF-English Curriculum Framework』"
   },
   {
    "year": 2016,
@@ -114,7 +130,8 @@
    "source": "小林賢太郎『僕がコントや演劇のために考えていること』",
    "ids": [
     "2016-12-reading-short-49"
-   ]
+   ],
+   "raw": "小林賢太郎『僕がコントや演劇のために考えていること』"
   },
   {
    "year": 2016,
@@ -125,7 +142,8 @@
     "2016-07-reading-long-60",
     "2016-07-reading-long-61",
     "2016-07-reading-long-62"
-   ]
+   ],
+   "raw": "茂木健一郎「疾走する精神」"
   },
   {
    "year": 2016,
@@ -134,7 +152,8 @@
    "ids": [
     "2016-07-reading-long-63",
     "2016-07-reading-long-64"
-   ]
+   ],
+   "raw": "博報堂ブランドデザイン「チームのアイデア力。―アイデアが出るチームになるための5つのステップ」"
   },
   {
    "year": 2016,
@@ -145,7 +164,8 @@
     "2016-07-reading-long-66",
     "2016-07-reading-long-67",
     "2016-07-reading-long-68"
-   ]
+   ],
+   "raw": "佐倉純/古田ゆかり/リビング・サイエンス・ラボ「おはようからおやすみまでの科学」"
   },
   {
    "year": 2016,
@@ -155,7 +175,8 @@
     "2016-07-reading-mid-50",
     "2016-07-reading-mid-51",
     "2016-07-reading-mid-52"
-   ]
+   ],
+   "raw": "内田樹「ぼくの住まい論」"
   },
   {
    "year": 2016,
@@ -165,7 +186,8 @@
     "2016-07-reading-mid-53",
     "2016-07-reading-mid-54",
     "2016-07-reading-mid-55"
-   ]
+   ],
+   "raw": "徳川家広「自分を守る経済学」"
   },
   {
    "year": 2016,
@@ -175,7 +197,8 @@
     "2016-07-reading-mid-56",
     "2016-07-reading-mid-57",
     "2016-07-reading-mid-58"
-   ]
+   ],
+   "raw": "木村俊介「暮しの手帖」2014年6-7月号"
   },
   {
    "year": 2016,
@@ -183,7 +206,8 @@
    "source": "和田秀樹「腹が立ったら怒りなさい」",
    "ids": [
     "2016-07-reading-short-47"
-   ]
+   ],
+   "raw": "和田秀樹「腹が立ったら怒りなさい」"
   },
   {
    "year": 2016,
@@ -191,7 +215,8 @@
    "source": "マイク・モラスキー日本経済新聞2014年3月25日付夕刊",
    "ids": [
     "2016-07-reading-short-48"
-   ]
+   ],
+   "raw": "マイク・モラスキー日本経済新聞2014年3月25日付夕刊"
   },
   {
    "year": 2016,
@@ -199,7 +224,8 @@
    "source": "鈴木孝夫「人にはどれだけの物が必要か―ミニマム生活のすすめ」",
    "ids": [
     "2016-07-reading-short-49"
-   ]
+   ],
+   "raw": "鈴木孝夫「人にはどれだけの物が必要か―ミニマム生活のすすめ」"
   },
   {
    "year": 2015,
@@ -210,7 +236,8 @@
     "2015-12-reading-long-60",
     "2015-12-reading-long-61",
     "2015-12-reading-long-62"
-   ]
+   ],
+   "raw": "山本博文『歴史をつかむ技法』"
   },
   {
    "year": 2015,
@@ -219,7 +246,8 @@
    "ids": [
     "2015-12-reading-long-63",
     "2015-12-reading-long-64"
-   ]
+   ],
+   "raw": "久我尚子『若者は本当にお金がないのか?――統計データが語る意外な真実』"
   },
   {
    "year": 2015,
@@ -230,7 +258,8 @@
     "2015-12-reading-long-66",
     "2015-12-reading-long-67",
     "2015-12-reading-long-68"
-   ]
+   ],
+   "raw": "志水哲也編『山と私の対話』"
   },
   {
    "year": 2015,
@@ -240,7 +269,8 @@
     "2015-12-reading-mid-50",
     "2015-12-reading-mid-51",
     "2015-12-reading-mid-52"
-   ]
+   ],
+   "raw": "押井守『凡人として生きるということ』"
   },
   {
    "year": 2015,
@@ -250,7 +280,8 @@
     "2015-12-reading-mid-53",
     "2015-12-reading-mid-54",
     "2015-12-reading-mid-55"
-   ]
+   ],
+   "raw": "一川誠『大人の時間はなぜ短いのか』"
   },
   {
    "year": 2015,
@@ -260,7 +291,8 @@
     "2015-12-reading-mid-56",
     "2015-12-reading-mid-57",
     "2015-12-reading-mid-58"
-   ]
+   ],
+   "raw": "朝倉敏夫編『火と食』"
   },
   {
    "year": 2015,
@@ -268,7 +300,8 @@
    "source": "高橋克彦『「上司がさっぱりわかってくれない」と思っているあなたへ』",
    "ids": [
     "2015-12-reading-short-46"
-   ]
+   ],
+   "raw": "高橋克彦『「上司がさっぱりわかってくれない」と思っているあなたへ』"
   },
   {
    "year": 2015,
@@ -276,7 +309,8 @@
    "source": "米原万里「心臓に毛が生えている理由」",
    "ids": [
     "2015-12-reading-short-48"
-   ]
+   ],
+   "raw": "米原万里「心臓に毛が生えている理由」"
   },
   {
    "year": 2015,
@@ -284,7 +318,8 @@
    "source": "井上俊・船津衛編『自分と他者の社会学』",
    "ids": [
     "2015-12-reading-short-49"
-   ]
+   ],
+   "raw": "井上俊・船津衛編『自分と他者の社会学』"
   },
   {
    "year": 2015,
@@ -295,7 +330,8 @@
     "2015-07-reading-long-60",
     "2015-07-reading-long-61",
     "2015-07-reading-long-62"
-   ]
+   ],
+   "raw": "近藤譲『〈音楽〉という謎』"
   },
   {
    "year": 2015,
@@ -304,18 +340,22 @@
    "ids": [
     "2015-07-reading-long-63",
     "2015-07-reading-long-64"
-   ]
+   ],
+   "raw": "角屋重樹・森本信也編著『小学校理科教育はこう変わる――ニューサイエンスを求めて』"
   },
   {
    "year": 2015,
    "month": 7,
-   "source": "成毛真『大人げない大人になれ!』",
+   "source": "成毛眞『大人げない大人になれ!』",
    "ids": [
     "2015-07-reading-long-65",
     "2015-07-reading-long-66",
     "2015-07-reading-long-67",
     "2015-07-reading-long-68"
-   ]
+   ],
+   "raw": "成毛真『大人げない大人になれ!』",
+   "corrected": true,
+   "evidence": "「真」→正字「眞」（著者表記）"
   },
   {
    "year": 2015,
@@ -325,7 +365,8 @@
     "2015-07-reading-mid-50",
     "2015-07-reading-mid-51",
     "2015-07-reading-mid-52"
-   ]
+   ],
+   "raw": "平野啓一郎『本の読み方スロー・リーディングの実践』"
   },
   {
    "year": 2015,
@@ -335,7 +376,8 @@
     "2015-07-reading-mid-53",
     "2015-07-reading-mid-54",
     "2015-07-reading-mid-55"
-   ]
+   ],
+   "raw": "藤原正彦『週刊新潮』2010 年10 月28 日号"
   },
   {
    "year": 2015,
@@ -345,7 +387,8 @@
     "2015-07-reading-mid-56",
     "2015-07-reading-mid-57",
     "2015-07-reading-mid-58"
-   ]
+   ],
+   "raw": "成田康昭『メデイア空間文化論―いくつもの私との遭遇』"
   },
   {
    "year": 2015,
@@ -353,7 +396,8 @@
    "source": "吉川美樹『半径1 メートルの「売れる!」発想術』",
    "ids": [
     "2015-07-reading-short-46"
-   ]
+   ],
+   "raw": "吉川美樹『半径1 メートルの「売れる!」発想術』"
   },
   {
    "year": 2015,
@@ -361,15 +405,19 @@
    "source": "朝日新聞グロープ2013 年8 月18 日付",
    "ids": [
     "2015-07-reading-short-47"
-   ]
+   ],
+   "raw": "朝日新聞グロープ2013 年8 月18 日付"
   },
   {
    "year": 2015,
    "month": 7,
-   "source": "司司馬遼太郎『風塵抄』",
+   "source": "司馬遼太郎『風塵抄』",
    "ids": [
     "2015-07-reading-short-48"
-   ]
+   ],
+   "raw": "司司馬遼太郎『風塵抄』",
+   "corrected": true,
+   "evidence": "衍字「司」を除去（司馬遼太郎の『風塵抄』）"
   },
   {
    "year": 2015,
@@ -377,7 +425,8 @@
    "source": "梅原猛『饗宴―梅原猛随想と対話』",
    "ids": [
     "2015-07-reading-short-49"
-   ]
+   ],
+   "raw": "梅原猛『饗宴―梅原猛随想と対話』"
   },
   {
    "year": 2014,
@@ -388,16 +437,20 @@
     "2014-12-reading-long-60",
     "2014-12-reading-long-61",
     "2014-12-reading-long-62"
-   ]
+   ],
+   "raw": "岡本太郎『美しく怒れ』"
   },
   {
    "year": 2014,
    "month": 12,
-   "source": "五十嵐太郎 『建築はいかに社会と回路をつなぐのか』",
+   "source": "五十嵐太郎『建築はいかに社会と回路をつなぐのか』",
    "ids": [
     "2014-12-reading-long-63",
     "2014-12-reading-long-64"
-   ]
+   ],
+   "raw": "五十嵐太郎 『建築はいかに社会と回路をつなぐのか』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2014,
@@ -408,7 +461,8 @@
     "2014-12-reading-long-66",
     "2014-12-reading-long-67",
     "2014-12-reading-long-68"
-   ]
+   ],
+   "raw": "樋口裕一『差がつく読書』"
   },
   {
    "year": 2014,
@@ -418,7 +472,8 @@
     "2014-12-reading-mid-50",
     "2014-12-reading-mid-51",
     "2014-12-reading-mid-52"
-   ]
+   ],
+   "raw": "佐々木直彦『「仕事も人生もうまくいく人」の考え方』"
   },
   {
    "year": 2014,
@@ -428,7 +483,8 @@
     "2014-12-reading-mid-53",
     "2014-12-reading-mid-54",
     "2014-12-reading-mid-55"
-   ]
+   ],
+   "raw": "浜田寿美男『「私」とは何か』"
   },
   {
    "year": 2014,
@@ -438,7 +494,8 @@
     "2014-12-reading-mid-56",
     "2014-12-reading-mid-57",
     "2014-12-reading-mid-58"
-   ]
+   ],
+   "raw": "池田晶子『人間自身――考えることに終わりなく』"
   },
   {
    "year": 2014,
@@ -446,7 +503,8 @@
    "source": "大宅映子『親の常識』",
    "ids": [
     "2014-12-reading-short-46"
-   ]
+   ],
+   "raw": "大宅映子『親の常識』"
   },
   {
    "year": 2014,
@@ -454,7 +512,8 @@
    "source": "串田孫一『考える葦』",
    "ids": [
     "2014-12-reading-short-48"
-   ]
+   ],
+   "raw": "串田孫一『考える葦』"
   },
   {
    "year": 2014,
@@ -462,7 +521,8 @@
    "source": "倉嶋厚『日和見の事典――倉嶋厚の人文気象学ノート』",
    "ids": [
     "2014-12-reading-short-49"
-   ]
+   ],
+   "raw": "倉嶋厚『日和見の事典――倉嶋厚の人文気象学ノート』"
   },
   {
    "year": 2014,
@@ -473,16 +533,20 @@
     "2014-07-reading-long-60",
     "2014-07-reading-long-61",
     "2014-07-reading-long-62"
-   ]
+   ],
+   "raw": "角田光代『トランヴェール』2012年3月号"
   },
   {
    "year": 2014,
    "month": 7,
-   "source": "渡部康夫 『現代の図書館』第192号",
+   "source": "渡部康夫『現代の図書館』第192号",
    "ids": [
     "2014-07-reading-long-63",
     "2014-07-reading-long-64"
-   ]
+   ],
+   "raw": "渡部康夫 『現代の図書館』第192号",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2014,
@@ -492,7 +556,8 @@
     "2014-07-reading-mid-50",
     "2014-07-reading-mid-51",
     "2014-07-reading-mid-52"
-   ]
+   ],
+   "raw": "田中正躬監修・編著『氾濫するマーク—多様化する認証』"
   },
   {
    "year": 2014,
@@ -502,17 +567,21 @@
     "2014-07-reading-mid-53",
     "2014-07-reading-mid-54",
     "2014-07-reading-mid-55"
-   ]
+   ],
+   "raw": "柳井正「現実を視よ」"
   },
   {
    "year": 2014,
    "month": 7,
-   "source": "阿久悠 『清らかな厭世-言葉を失くした日本人へ』",
+   "source": "阿久悠『清らかな厭世-言葉を失くした日本人へ』",
    "ids": [
     "2014-07-reading-mid-56",
     "2014-07-reading-mid-57",
     "2014-07-reading-mid-58"
-   ]
+   ],
+   "raw": "阿久悠 『清らかな厭世-言葉を失くした日本人へ』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2014,
@@ -520,7 +589,8 @@
    "source": "酒井項子『黒いマナー』",
    "ids": [
     "2014-07-reading-short-47"
-   ]
+   ],
+   "raw": "酒井項子『黒いマナー』"
   },
   {
    "year": 2014,
@@ -528,7 +598,8 @@
    "source": "著者代表森亘『異文化への理解』",
    "ids": [
     "2014-07-reading-short-48"
-   ]
+   ],
+   "raw": "著者代表森亘『異文化への理解』"
   },
   {
    "year": 2013,
@@ -539,7 +610,8 @@
     "2013-12-reading-long-60",
     "2013-12-reading-long-61",
     "2013-12-reading-long-62"
-   ]
+   ],
+   "raw": "渡辺裕『音楽は社会を映す一考える耳「再論」』"
   },
   {
    "year": 2013,
@@ -548,7 +620,8 @@
    "ids": [
     "2013-12-reading-long-63",
     "2013-12-reading-long-64"
-   ]
+   ],
+   "raw": "時子山ひろみ『安全で良質な食生活を手に入れるーフードシステム入門』"
   },
   {
    "year": 2013,
@@ -559,7 +632,8 @@
     "2013-12-reading-long-66",
     "2013-12-reading-long-67",
     "2013-12-reading-long-68"
-   ]
+   ],
+   "raw": "松浦弥太郎『あたらしいあたりまえ。一暮らしのなかの工夫と発見ノート2』"
   },
   {
    "year": 2013,
@@ -569,7 +643,8 @@
     "2013-12-reading-mid-50",
     "2013-12-reading-mid-51",
     "2013-12-reading-mid-52"
-   ]
+   ],
+   "raw": "片岡鶴太郎『鶴太郎流墨彩画人門』"
   },
   {
    "year": 2013,
@@ -579,7 +654,8 @@
     "2013-12-reading-mid-53",
     "2013-12-reading-mid-54",
     "2013-12-reading-mid-55"
-   ]
+   ],
+   "raw": "瀬戸一夫『科学的思考とは何だろうかーものつくりの視点から』"
   },
   {
    "year": 2013,
@@ -589,7 +665,8 @@
     "2013-12-reading-mid-56",
     "2013-12-reading-mid-57",
     "2013-12-reading-mid-58"
-   ]
+   ],
+   "raw": "小浜逸郎『この国はなぜ寂しいのかー「ものさし」を失った日本人』"
   },
   {
    "year": 2013,
@@ -597,7 +674,8 @@
    "source": "野矢茂樹『はじめて考えるときのようにー「わかる」ための哲学的道案内』",
    "ids": [
     "2013-12-reading-short-46"
-   ]
+   ],
+   "raw": "野矢茂樹『はじめて考えるときのようにー「わかる」ための哲学的道案内』"
   },
   {
    "year": 2013,
@@ -605,7 +683,8 @@
    "source": "黒井千次『図書』2007年2月号",
    "ids": [
     "2013-12-reading-short-49"
-   ]
+   ],
+   "raw": "黒井千次『図書』2007年2月号"
   },
   {
    "year": 2013,
@@ -616,7 +695,8 @@
     "2013-07-reading-long-60",
     "2013-07-reading-long-61",
     "2013-07-reading-long-62"
-   ]
+   ],
+   "raw": "レイチェル・カーソン著・青堰の一説『沈黙の春』一筑波常治の｢解説｣"
   },
   {
    "year": 2013,
@@ -627,7 +707,8 @@
     "2013-07-reading-long-66",
     "2013-07-reading-long-67",
     "2013-07-reading-long-68"
-   ]
+   ],
+   "raw": "山田太一『誰かへの手紙のように』"
   },
   {
    "year": 2013,
@@ -637,7 +718,8 @@
     "2013-07-reading-mid-50",
     "2013-07-reading-mid-51",
     "2013-07-reading-mid-52"
-   ]
+   ],
+   "raw": "海保博之編著『瞬間情報処理の心理学』"
   },
   {
    "year": 2013,
@@ -647,7 +729,8 @@
     "2013-07-reading-mid-53",
     "2013-07-reading-mid-54",
     "2013-07-reading-mid-55"
-   ]
+   ],
+   "raw": "紀田順一郎『読書三到――新時代の「読む・引く・考える」』"
   },
   {
    "year": 2013,
@@ -657,7 +740,8 @@
     "2013-07-reading-mid-56",
     "2013-07-reading-mid-57",
     "2013-07-reading-mid-58"
-   ]
+   ],
+   "raw": "宇野重規『〈私〉時代のデモクラシー』"
   },
   {
    "year": 2013,
@@ -665,15 +749,19 @@
    "source": "草柳千早「AERA Mook」1999年7月10日号",
    "ids": [
     "2013-07-reading-short-46"
-   ]
+   ],
+   "raw": "草柳千早「AERA Mook」1999年7月10日号"
   },
   {
    "year": 2013,
    "month": 7,
-   "source": "高山博 『歴史学未来へのまなざし — 中世シチリアからグローバル・ヒスとリーへ』",
+   "source": "高山博『歴史学未来へのまなざし — 中世シチリアからグローバル・ヒストリーへ』",
    "ids": [
     "2013-07-reading-short-47"
-   ]
+   ],
+   "raw": "高山博 『歴史学未来へのまなざし — 中世シチリアからグローバル・ヒスとリーへ』",
+   "corrected": true,
+   "evidence": "誤字（ヒスとリー→ヒストリー）"
   },
   {
    "year": 2013,
@@ -681,7 +769,8 @@
    "source": "高村薫『門人生——平成雑記帳二〇〇七三○ ○九』",
    "ids": [
     "2013-07-reading-short-48"
-   ]
+   ],
+   "raw": "高村薫『門人生——平成雑記帳二〇〇七三○ ○九』"
   },
   {
    "year": 2013,
@@ -689,7 +778,8 @@
    "source": "むのたけじ『希望は絶望のど真ん中に 』",
    "ids": [
     "2013-07-reading-short-49"
-   ]
+   ],
+   "raw": "むのたけじ『希望は絶望のど真ん中に 』"
   },
   {
    "year": 2012,
@@ -700,37 +790,47 @@
     "2012-12-reading-long-60",
     "2012-12-reading-long-61",
     "2012-12-reading-long-62"
-   ]
+   ],
+   "raw": "苅谷剛彦·西研『考えあう技術――教育と社会を哲学する」"
   },
   {
    "year": 2012,
    "month": 12,
-   "source": "植村八渺三省堂日取得",
+   "source": "植村八潮（三省堂）…（OCR 崩れ・書名要確認）",
    "ids": [
     "2012-12-reading-long-63",
     "2012-12-reading-long-64"
-   ]
+   ],
+   "raw": "植村八渺三省堂日取得",
+   "corrected": true,
+   "evidence": "著者名を「植村八潮」に補正（専修大学教授・Amazon 著者ページ）。書名は復元不能"
   },
   {
    "year": 2012,
    "month": 12,
-   "source": "佐藤可士和『加藤可士和の超整理術』",
+   "source": "佐藤可士和『佐藤可士和の超整理術』",
    "ids": [
     "2012-12-reading-long-65",
     "2012-12-reading-long-66",
     "2012-12-reading-long-67",
     "2012-12-reading-long-68"
-   ]
+   ],
+   "raw": "佐藤可士和『加藤可士和の超整理術』",
+   "corrected": true,
+   "evidence": "本文転写の誤り（著者名の混入）"
   },
   {
    "year": 2012,
    "month": 12,
-   "source": "池上彰『の勉強法』",
+   "source": "池上彰『〈わかりやすさ〉の勉強法』（講談社現代新書）",
    "ids": [
     "2012-12-reading-mid-50",
     "2012-12-reading-mid-51",
     "2012-12-reading-mid-52"
-   ]
+   ],
+   "raw": "池上彰『の勉強法』",
+   "corrected": true,
+   "evidence": "欠落タイトルを書誌で補正（講談社・Amazon）"
   },
   {
    "year": 2012,
@@ -740,7 +840,8 @@
     "2012-12-reading-mid-53",
     "2012-12-reading-mid-54",
     "2012-12-reading-mid-55"
-   ]
+   ],
+   "raw": "ひこ•田中『大人のための児童文学講座』"
   },
   {
    "year": 2012,
@@ -750,7 +851,8 @@
     "2012-12-reading-mid-56",
     "2012-12-reading-mid-57",
     "2012-12-reading-mid-58"
-   ]
+   ],
+   "raw": "多木浩二『都市の政治学』"
   },
   {
    "year": 2012,
@@ -758,7 +860,8 @@
    "source": "浜野保樹『模倣される日本――映画、アニメから料理、ファッションまで』",
    "ids": [
     "2012-12-reading-short-46"
-   ]
+   ],
+   "raw": "浜野保樹『模倣される日本――映画、アニメから料理、ファッションまで』"
   },
   {
    "year": 2012,
@@ -766,7 +869,8 @@
    "source": "伊藤真『会社コンプライアンス――内部統制の条件』",
    "ids": [
     "2012-12-reading-short-48"
-   ]
+   ],
+   "raw": "伊藤真『会社コンプライアンス――内部統制の条件』"
   },
   {
    "year": 2012,
@@ -774,7 +878,8 @@
    "source": "上田紀行「生きる意味」",
    "ids": [
     "2012-12-reading-short-49"
-   ]
+   ],
+   "raw": "上田紀行「生きる意味」"
   },
   {
    "year": 2012,
@@ -785,7 +890,8 @@
     "2012-07-reading-long-60",
     "2012-07-reading-long-61",
     "2012-07-reading-long-62"
-   ]
+   ],
+   "raw": "三木光範『理系発想の文章術』"
   },
   {
    "year": 2012,
@@ -794,7 +900,8 @@
    "ids": [
     "2012-07-reading-long-63",
     "2012-07-reading-long-64"
-   ]
+   ],
+   "raw": "高柳敦『琵琶湖所報』1996年第15号"
   },
   {
    "year": 2012,
@@ -805,7 +912,8 @@
     "2012-07-reading-long-66",
     "2012-07-reading-long-67",
     "2012-07-reading-long-68"
-   ]
+   ],
+   "raw": "猪瀬直樹「家」1999年９月26日付朝日新聞朝刊"
   },
   {
    "year": 2012,
@@ -815,7 +923,8 @@
     "2012-07-reading-mid-50",
     "2012-07-reading-mid-51",
     "2012-07-reading-mid-52"
-   ]
+   ],
+   "raw": "近藤勝重「しあわせのトンボ：会社人間の『その後』」 2007年11月14日付毎日新聞夕刊"
   },
   {
    "year": 2012,
@@ -825,7 +934,8 @@
     "2012-07-reading-mid-53",
     "2012-07-reading-mid-54",
     "2012-07-reading-mid-55"
-   ]
+   ],
+   "raw": "田中詔一『ホンダの価値観―原点から守り続けるDNA』"
   },
   {
    "year": 2012,
@@ -835,31 +945,41 @@
     "2012-07-reading-mid-56",
     "2012-07-reading-mid-57",
     "2012-07-reading-mid-58"
-   ]
+   ],
+   "raw": "大江健三郎『新しい文学のために』"
   },
   {
    "year": 2012,
    "month": 7,
-   "source": "茂木健一郎 『食のクオリア』",
+   "source": "茂木健一郎『食のクオリア』",
    "ids": [
     "2012-07-reading-short-46"
-   ]
+   ],
+   "raw": "茂木健一郎 『食のクオリア』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2012,
    "month": 7,
-   "source": "川崎洋 『ことばの力』",
+   "source": "川崎洋『ことばの力』",
    "ids": [
     "2012-07-reading-short-47"
-   ]
+   ],
+   "raw": "川崎洋 『ことばの力』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2012,
    "month": 7,
-   "source": "奥本大三郎 『虫の宇宙誌』",
+   "source": "奥本大三郎『虫の宇宙誌』",
    "ids": [
     "2012-07-reading-short-48"
-   ]
+   ],
+   "raw": "奥本大三郎 『虫の宇宙誌』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2012,
@@ -867,7 +987,8 @@
    "source": "日本経済新聞二〇一〇年三月八日付朝刊",
    "ids": [
     "2012-07-reading-short-49"
-   ]
+   ],
+   "raw": "日本経済新聞二〇一〇年三月八日付朝刊"
   },
   {
    "year": 2011,
@@ -878,7 +999,10 @@
     "2011-12-reading-long-60",
     "2011-12-reading-long-61",
     "2011-12-reading-long-62"
-   ]
+   ],
+   "raw": "二郎『現代の哲学』",
+   "suspicious": true,
+   "suspicious_note": "著者名が短すぎる（姓氏欠落の可能性）"
   },
   {
    "year": 2011,
@@ -887,7 +1011,8 @@
    "ids": [
     "2011-12-reading-long-63",
     "2011-12-reading-long-64"
-   ]
+   ],
+   "raw": "小山亜美夫『その絵、いくら？現代アートの相場がわかる 』"
   },
   {
    "year": 2011,
@@ -898,7 +1023,8 @@
     "2011-12-reading-long-66",
     "2011-12-reading-long-67",
     "2011-12-reading-long-68"
-   ]
+   ],
+   "raw": "日高敏隆『春の数えかた』"
   },
   {
    "year": 2011,
@@ -908,7 +1034,8 @@
     "2011-12-reading-mid-50",
     "2011-12-reading-mid-51",
     "2011-12-reading-mid-52"
-   ]
+   ],
+   "raw": "みどり「レット・イット・ビー」"
   },
   {
    "year": 2011,
@@ -918,17 +1045,21 @@
     "2011-12-reading-mid-53",
     "2011-12-reading-mid-54",
     "2011-12-reading-mid-55"
-   ]
+   ],
+   "raw": "日新聞2010年8月17日付夕刊"
   },
   {
    "year": 2011,
    "month": 12,
-   "source": "梅田卓夫、清水良典服部左右松川油由博編 『高校生のための文章読本』",
+   "source": "梅田卓夫、清水良典服部左右松川油由博編『高校生のための文章読本』",
    "ids": [
     "2011-12-reading-mid-56",
     "2011-12-reading-mid-57",
     "2011-12-reading-mid-58"
-   ]
+   ],
+   "raw": "梅田卓夫、清水良典服部左右松川油由博編 『高校生のための文章読本』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2011,
@@ -936,7 +1067,8 @@
    "source": "御代川貴久夫・関啓子「環境教育を学ぶ人のために」",
    "ids": [
     "2011-12-reading-short-48"
-   ]
+   ],
+   "raw": "御代川貴久夫・関啓子「環境教育を学ぶ人のために」"
   },
   {
    "year": 2011,
@@ -944,7 +1076,8 @@
    "source": "仙本文＜緒結婚願望＞",
    "ids": [
     "2011-12-reading-short-49"
-   ]
+   ],
+   "raw": "仙本文＜緒結婚願望＞"
   },
   {
    "year": 2011,
@@ -955,7 +1088,8 @@
     "2011-07-reading-long-60",
     "2011-07-reading-long-61",
     "2011-07-reading-long-62"
-   ]
+   ],
+   "raw": "前田暎樹「独学の精神」"
   },
   {
    "year": 2011,
@@ -964,7 +1098,8 @@
    "ids": [
     "2011-07-reading-long-63",
     "2011-07-reading-long-64"
-   ]
+   ],
+   "raw": "小西行郎「早期教育と脳」"
   },
   {
    "year": 2011,
@@ -975,7 +1110,8 @@
     "2011-07-reading-long-66",
     "2011-07-reading-long-67",
     "2011-07-reading-long-68"
-   ]
+   ],
+   "raw": "内山節『「里」という思想』"
   },
   {
    "year": 2011,
@@ -985,7 +1121,8 @@
     "2011-07-reading-mid-50",
     "2011-07-reading-mid-51",
     "2011-07-reading-mid-52"
-   ]
+   ],
+   "raw": "酒井邦嘉『科学者という仕事 』"
   },
   {
    "year": 2011,
@@ -995,33 +1132,43 @@
     "2011-07-reading-mid-53",
     "2011-07-reading-mid-54",
     "2011-07-reading-mid-55"
-   ]
+   ],
+   "raw": "山崎武也「シニアこそ都会に住もう一田舎暮らしいは不安がいっぱい」"
   },
   {
    "year": 2011,
    "month": 7,
-   "source": "寺島実郎 『世界を知る力」",
+   "source": "寺島実郎『世界を知る力」",
    "ids": [
     "2011-07-reading-mid-56",
     "2011-07-reading-mid-57",
     "2011-07-reading-mid-58"
-   ]
+   ],
+   "raw": "寺島実郎 『世界を知る力」",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2011,
    "month": 7,
-   "source": "江上滉 『やきものの世界』",
+   "source": "江上滉『やきものの世界』",
    "ids": [
     "2011-07-reading-short-46"
-   ]
+   ],
+   "raw": "江上滉 『やきものの世界』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2011,
    "month": 7,
-   "source": "吉田忙 「ヒトとサ正のあいだーー精神はいつ生まれたのか」",
+   "source": "吉田脩二『精神はいつ生まれたのか ヒトとサルのあいだ』",
    "ids": [
     "2011-07-reading-short-47"
-   ]
+   ],
+   "raw": "吉田忙 「ヒトとサ正のあいだーー精神はいつ生まれたのか」",
+   "corrected": true,
+   "evidence": "OCR 崩れを書誌で補正（Amazon・文春 books）"
   },
   {
    "year": 2011,
@@ -1029,18 +1176,22 @@
    "source": "正高信男1「父親力」",
    "ids": [
     "2011-07-reading-short-49"
-   ]
+   ],
+   "raw": "正高信男1「父親力」"
   },
   {
    "year": 2010,
    "month": 7,
-   "source": "佐藤静 『こころサポート』",
+   "source": "佐藤静『こころサポート』",
    "ids": [
     "2010-07-reading-long-59",
     "2010-07-reading-long-60",
     "2010-07-reading-long-61",
     "2010-07-reading-long-62"
-   ]
+   ],
+   "raw": "佐藤静 『こころサポート』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2010,
@@ -1050,18 +1201,22 @@
     "2010-07-reading-long-63",
     "2010-07-reading-long-64",
     "2010-07-reading-long-65"
-   ]
+   ],
+   "raw": "盛田昭夫『学歴無用論 』"
   },
   {
    "year": 2010,
    "month": 7,
-   "source": "松永真理 『シゴトのココロ』",
+   "source": "松永真理『シゴトのココロ』",
    "ids": [
     "2010-07-reading-long-66",
     "2010-07-reading-long-67",
     "2010-07-reading-long-68",
     "2010-07-reading-long-69"
-   ]
+   ],
+   "raw": "松永真理 『シゴトのココロ』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2010,
@@ -1071,7 +1226,8 @@
     "2010-07-reading-mid-50",
     "2010-07-reading-mid-51",
     "2010-07-reading-mid-52"
-   ]
+   ],
+   "raw": "斉藤茂太『どんなダズもなおる本―17タイプ別グズ解消法』"
   },
   {
    "year": 2010,
@@ -1081,41 +1237,54 @@
     "2010-07-reading-mid-53",
     "2010-07-reading-mid-54",
     "2010-07-reading-mid-55"
-   ]
+   ],
+   "raw": "七尾純『テクテク観察ツバメ日記 』"
   },
   {
    "year": 2010,
    "month": 7,
-   "source": "岸本重陳 『経済のしくみ100話』",
+   "source": "岸本重陳『経済のしくみ100話』",
    "ids": [
     "2010-07-reading-mid-56",
     "2010-07-reading-mid-57",
     "2010-07-reading-mid-58"
-   ]
+   ],
+   "raw": "岸本重陳 『経済のしくみ100話』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2010,
    "month": 7,
-   "source": "小竹裕一 『アジア人との正しい付き合い方―異文化へのまなざし』",
+   "source": "小竹裕一『アジア人との正しい付き合い方―異文化へのまなざし』",
    "ids": [
     "2010-07-reading-short-46"
-   ]
+   ],
+   "raw": "小竹裕一 『アジア人との正しい付き合い方―異文化へのまなざし』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   },
   {
    "year": 2010,
    "month": 7,
-   "source": "竹内薫・荒野健彦「透明人間」の作り方 』",
+   "source": "竹内薫・荒野健彦『「透明人間」の作り方』",
    "ids": [
     "2010-07-reading-short-47"
-   ]
+   ],
+   "raw": "竹内薫・荒野健彦「透明人間」の作り方 』",
+   "corrected": true,
+   "evidence": "括弧の崩れを補正（書名は入れ子引用）"
   },
   {
    "year": 2010,
    "month": 7,
-   "source": "木通行 『ネーミングの極意一日本語の魅力は音がつくる』",
+   "source": "木通行『ネーミングの極意一日本語の魅力は音がつくる』",
    "ids": [
     "2010-07-reading-short-49"
-   ]
+   ],
+   "raw": "木通行 『ネーミングの極意一日本語の魅力は音がつくる』",
+   "corrected": true,
+   "evidence": "書名括弧前後の余分な空白を除去"
   }
  ],
  "unknown_passages": [
@@ -1126,7 +1295,12 @@
    "ids": [
     "2010-07-reading-long-70",
     "2010-07-reading-long-71"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "〈主催〉清森市〈協費〉昭和デザイン株式会社、山手百貨店、新東",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2010,
@@ -1134,7 +1308,12 @@
    "guess_base": "2010-07-reading-short",
    "ids": [
     "2010-07-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "敬具記 2009年12月29日から2010年1月4日まで 以",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2010,
@@ -1154,7 +1333,12 @@
     "2010-12-reading-long-69",
     "2010-12-reading-long-70",
     "2010-12-reading-long-71"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "行動主義心理学と呼ばれるこの流派では、サルやネズミなどにレバ",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2010,
@@ -1170,7 +1354,12 @@
     "2010-12-reading-mid-56",
     "2010-12-reading-mid-57",
     "2010-12-reading-mid-58"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "白紙のキャンバスに絵を描くためには表現力が必要なように、地理",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2010,
@@ -1181,7 +1370,12 @@
     "2010-12-reading-short-47",
     "2010-12-reading-short-48",
     "2010-12-reading-short-49"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "創造力を身につける上でまず第一に必要なのは、決められた課題に",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2011,
@@ -1190,7 +1384,12 @@
    "ids": [
     "2011-07-reading-long-69",
     "2011-07-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "リーさは平日の午後3時から9時までの間 しな働けないが、同じ",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2011,
@@ -1198,7 +1397,12 @@
    "guess_base": "2011-07-reading-short",
    "ids": [
     "2011-07-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "しかし、原材料のさらなる価格高騰が続き、現在の出荷価格の維持",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2011,
@@ -1207,7 +1411,12 @@
    "ids": [
     "2011-12-reading-long-69",
     "2011-12-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "（送付先はホームペー参照） ②応募期間2012年6月15日 ",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2011,
@@ -1216,7 +1425,12 @@
    "ids": [
     "2011-12-reading-short-46",
     "2011-12-reading-short-47"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "つまり、勘がいいとか、察しがいいというのは、目で見だこと、聞",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2012,
@@ -1225,7 +1439,12 @@
    "ids": [
     "2012-07-reading-long-69",
     "2012-07-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "✿✿東京都カルチャー会館 ４月開講の講座✿✿ ①やさしい英語",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2012,
@@ -1234,7 +1453,12 @@
    "ids": [
     "2012-12-reading-long-69",
     "2012-12-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "・舞台芸術関連書籍を扱う東西劇場内直営売店、および系列劇場売",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2012,
@@ -1242,7 +1466,12 @@
    "guess_base": "2012-12-reading-short",
    "ids": [
     "2012-12-reading-short-47"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "営業部社員各位 総務部長 業務用携帯電話の貸与について この",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2013,
@@ -1253,7 +1482,12 @@
     "2013-07-reading-long-64",
     "2013-07-reading-long-69",
     "2013-07-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "A    現代の若者向けのファッション、かつての一流デザイナ",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2013,
@@ -1262,7 +1496,12 @@
    "ids": [
     "2013-12-reading-long-69",
     "2013-12-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "【対象者】原口市内にお住まいの人または市内にお勲めの人 【利",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2013,
@@ -1271,7 +1510,12 @@
    "ids": [
     "2013-12-reading-short-47",
     "2013-12-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "予約ページによりますと、宿泊の可否についてはメールでご連絡い",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2014,
@@ -1284,7 +1528,12 @@
     "2014-07-reading-long-68",
     "2014-07-reading-long-69",
     "2014-07-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "①現代という時代とは、どのような時代だと筆者は述べているか。",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2014,
@@ -1293,7 +1542,12 @@
    "ids": [
     "2014-07-reading-short-46",
     "2014-07-reading-short-49"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "昨日、当事務所の「無料法律相談会」にメールにてお申し込みいた",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2014,
@@ -1302,7 +1556,12 @@
    "ids": [
     "2014-12-reading-long-69",
     "2014-12-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "就職支援行事(9月―12月)のスケジュール 就職活動を行う学",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2014,
@@ -1310,7 +1569,12 @@
    "guess_base": "2014-12-reading-short",
    "ids": [
     "2014-12-reading-short-47"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "ミツヌマ健康女品株式会社お客様担当係：0120-333-44",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2015,
@@ -1319,7 +1583,12 @@
    "ids": [
     "2015-07-reading-long-69",
     "2015-07-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "自由記述式の箇所が空欄でも構いません答えとしてが、選択式の箇",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2015,
@@ -1328,7 +1597,12 @@
    "ids": [
     "2015-12-reading-long-69",
     "2015-12-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "東あさひ市立博物館 東あさひ市立博物館“友の会”入会案内 “",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2015,
@@ -1336,7 +1610,12 @@
    "guess_base": "2015-12-reading-short",
    "ids": [
     "2015-12-reading-short-47"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "2015年12月1日 社員各位 年末年始休業に伴う出張経費精",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2016,
@@ -1345,7 +1624,12 @@
    "ids": [
     "2016-07-reading-long-69",
     "2016-07-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "応募資格 任期中を通じ、以下のa)～c)の条件をすべて満たす",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2016,
@@ -1353,7 +1637,12 @@
    "guess_base": "2016-07-reading-short",
    "ids": [
     "2016-07-reading-short-46"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "8月8日(月)にムンバイ工場視察の予定でしたが、本社にて会議",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2016,
@@ -1362,7 +1651,12 @@
    "ids": [
     "2016-12-reading-long-69",
     "2016-12-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "③ 他大学の図書館から借用した資料を見る 本学図書館が他大学",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2016,
@@ -1370,7 +1664,12 @@
    "guess_base": "2016-12-reading-short",
    "ids": [
     "2016-12-reading-short-47"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "予約システムの利用に際しては、事前に利用者登録が必要となりま",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2017,
@@ -1389,7 +1688,9 @@
     "2017-12-reading-long-68",
     "2017-12-reading-long-69",
     "2017-12-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "confidence": "none"
   },
   {
    "year": 2017,
@@ -1405,7 +1706,12 @@
     "2017-12-reading-mid-56",
     "2017-12-reading-mid-57",
     "2017-12-reading-mid-58"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "富士山の例を挙げて、筆者が述べようとしていることは何か?",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2017,
@@ -1416,7 +1722,9 @@
     "2017-12-reading-short-47",
     "2017-12-reading-short-48",
     "2017-12-reading-short-49"
-   ]
+   ],
+   "candidate": "",
+   "confidence": "none"
   },
   {
    "year": 2018,
@@ -1435,7 +1743,12 @@
     "2018-07-reading-long-68",
     "2018-07-reading-long-69",
     "2018-07-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "そうしなければ 、 他人によって勝 手な 、 自らの物語的分",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2018,
@@ -1451,7 +1764,12 @@
     "2018-07-reading-mid-56",
     "2018-07-reading-mid-57",
     "2018-07-reading-mid-58"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "本が売れることについて、筆者はどのように考えているか。",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2018,
@@ -1462,7 +1780,12 @@
     "2018-07-reading-short-47",
     "2018-07-reading-short-48",
     "2018-07-reading-short-49"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "人の生あらゆる局面における 「 前提 ] なの 、 でそのこ",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2018,
@@ -1481,7 +1804,12 @@
     "2018-12-reading-long-68",
     "2018-12-reading-long-69",
     "2018-12-reading-long-70"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "人間がいない時代の日本の森の生態系について、筆者はどのように",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2018,
@@ -1497,7 +1825,12 @@
     "2018-12-reading-mid-56",
     "2018-12-reading-mid-57",
     "2018-12-reading-mid-58"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "筆者によると、音楽体験において大切なことは何か。",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2018,
@@ -1508,7 +1841,9 @@
     "2018-12-reading-short-47",
     "2018-12-reading-short-48",
     "2018-12-reading-short-49"
-   ]
+   ],
+   "candidate": "",
+   "confidence": "none"
   },
   {
    "year": 2019,
@@ -1527,7 +1862,12 @@
     "2019-07-reading-long-67",
     "2019-07-reading-long-68",
     "2019-07-reading-long-69"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "そして、生物がそこに存在することができれば、そこには生物たち",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2019,
@@ -1542,7 +1882,12 @@
     "2019-07-reading-mid-55",
     "2019-07-reading-mid-56",
     "2019-07-reading-mid-57"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "キャンプやバーベキューの後に放置されたゴミや、里山や人里近い",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2019,
@@ -1553,7 +1898,12 @@
     "2019-07-reading-short-47",
     "2019-07-reading-short-48",
     "2019-07-reading-short-49"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "とはいえ、いままでの経験や考えによって無意識につくられてしま",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2019,
@@ -1572,7 +1922,12 @@
     "2019-12-reading-long-67",
     "2019-12-reading-long-68",
     "2019-12-reading-long-69"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "本当はそういう色気は基礎科学に馴染まないのですが、メディアか",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2019,
@@ -1587,7 +1942,12 @@
     "2019-12-reading-mid-55",
     "2019-12-reading-mid-56",
     "2019-12-reading-mid-57"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "順序として 「考え」がもともとあったから言葉が出てくるのだと",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2019,
@@ -1598,7 +1958,12 @@
     "2019-12-reading-short-47",
     "2019-12-reading-short-48",
     "2019-12-reading-short-49"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "株式会社フジハルクお客様センター:0120-333-4585",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2020,
@@ -1612,7 +1977,12 @@
     "2020-12-reading-long-62",
     "2020-12-reading-long-67",
     "2020-12-reading-long-68"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "今この地球上で起こっている「第六の大絶滅」は、過去の五回とは",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2020,
@@ -1628,7 +1998,12 @@
     "2020-12-reading-mid-55",
     "2020-12-reading-mid-56",
     "2020-12-reading-mid-57"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "(1)近年、わが国では、物事を解説したり、考え方や視点を明確",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2020,
@@ -1639,7 +2014,12 @@
     "2020-12-reading-short-46",
     "2020-12-reading-short-47",
     "2020-12-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "編集とは本来、すでにある材料をそのまま組み合わせ、そのことに",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2021,
@@ -1654,7 +2034,12 @@
     "2021-12-reading-long-67",
     "2021-12-reading-long-68",
     "2021-12-reading-long-69"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "A 1月15日 （株）ファッション・ベル 代表取締役　橋田直",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2021,
@@ -1670,7 +2055,12 @@
     "2021-12-reading-mid-55",
     "2021-12-reading-mid-56",
     "2021-12-reading-mid-57"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "いいモデルを出したからといって、営業の力が弱ければ売れるとは",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2021,
@@ -1681,7 +2071,12 @@
     "2021-12-reading-short-46",
     "2021-12-reading-short-47",
     "2021-12-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "反論されると言うことは、承諾してもらうためにクリアすべき点が",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2022,
@@ -1699,7 +2094,12 @@
     "2022-07-reading-long-66",
     "2022-07-reading-long-67",
     "2022-07-reading-long-68"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "先生の言葉に私は感銘し、その時以来、当時の私にとってとりわけ",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2022,
@@ -1715,7 +2115,12 @@
     "2022-07-reading-mid-55",
     "2022-07-reading-mid-56",
     "2022-07-reading-mid-57"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "マニュアルを使うことに慣らされた現代だからこそ、白紙の状態か",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2022,
@@ -1726,7 +2131,12 @@
     "2022-07-reading-short-46",
     "2022-07-reading-short-47",
     "2022-07-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "(1) テレビ番組は、その番組内容のすべてが視聴者に伝わるよ",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2022,
@@ -1743,7 +2153,12 @@
     "2022-12-reading-long-64",
     "2022-12-reading-long-65",
     "2022-12-reading-long-66"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "農山村に暮らす人びとと都市の市民とでは、その感じ方は同じでは",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2022,
@@ -1758,7 +2173,12 @@
     "2022-12-reading-mid-54",
     "2022-12-reading-mid-55",
     "2022-12-reading-mid-56"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "限られたスペースで、しかも安全性や管理の問題を考えればそうな",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2022,
@@ -1769,7 +2189,12 @@
     "2022-12-reading-short-46",
     "2022-12-reading-short-47",
     "2022-12-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "ネガティブな感情でも、もつことは自然なことであり、生きる上で",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2023,
@@ -1786,7 +2211,12 @@
     "2023-07-reading-long-64",
     "2023-07-reading-long-65",
     "2023-07-reading-long-66"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "僕らがミーティングをしているとき、突然ロボピーは僕らの音声を",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2023,
@@ -1801,7 +2231,12 @@
     "2023-07-reading-mid-54",
     "2023-07-reading-mid-55",
     "2023-07-reading-mid-56"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "それは、何事も信用しないというような厭世的な生き方に讃がるの",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2023,
@@ -1812,7 +2247,12 @@
     "2023-07-reading-short-46",
     "2023-07-reading-short-47",
     "2023-07-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "今、流行っているものの情報に熱心であればあるほど、世間で流行",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2024,
@@ -1829,7 +2269,12 @@
     "2024-07-reading-long-64",
     "2024-07-reading-long-65",
     "2024-07-reading-long-66"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "本当のところは、数学の力というのは、いろいろとわかったことを",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2024,
@@ -1844,7 +2289,12 @@
     "2024-07-reading-mid-54",
     "2024-07-reading-mid-55",
     "2024-07-reading-mid-56"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "そして指先にふれたところに載っていた記事の中の人物になりきっ",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2024,
@@ -1855,7 +2305,12 @@
     "2024-07-reading-short-46",
     "2024-07-reading-short-47",
     "2024-07-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "本番に強いのは悪いことではありませんが、練習でしっかりできて",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2024,
@@ -1872,7 +2327,12 @@
     "2024-12-reading-long-64",
     "2024-12-reading-long-65",
     "2024-12-reading-long-66"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "あるいは新しい教科を担当し、一生懸命勉強して多少の不安を持ち",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2024,
@@ -1887,7 +2347,12 @@
     "2024-12-reading-mid-54",
     "2024-12-reading-mid-55",
     "2024-12-reading-mid-56"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "ライオンは狩りも共同で行い、獲物はみんなで食べますから年老い",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2024,
@@ -1898,7 +2363,12 @@
     "2024-12-reading-short-46",
     "2024-12-reading-short-47",
     "2024-12-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "「この問題については、○○さんが詳しい」 「この問題なら、○",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2025,
@@ -1915,7 +2385,12 @@
     "2025-07-reading-long-64",
     "2025-07-reading-long-65",
     "2025-07-reading-long-66"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "しかし、その逆に、子どもの頃から美術館に何度も足を運び、なじ",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2025,
@@ -1930,7 +2405,12 @@
     "2025-07-reading-mid-54",
     "2025-07-reading-mid-55",
     "2025-07-reading-mid-56"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "「知った」ことを、それまでの経験なども付け加えながら自分のな",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   },
   {
    "year": 2025,
@@ -1941,7 +2421,12 @@
     "2025-07-reading-short-46",
     "2025-07-reading-short-47",
     "2025-07-reading-short-48"
-   ]
+   ],
+   "candidate": "",
+   "phrase": "街の中で人と人とがどう具体的に関係し合っているかを見せらし、",
+   "candidate_source": "",
+   "candidate_books": [],
+   "confidence": "none"
   }
  ],
  "usage_targets": [

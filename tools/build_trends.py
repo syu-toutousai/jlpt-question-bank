@@ -73,10 +73,15 @@ def main():
     # ---- 出典索引 rows (year desc)
     src_rows = []
     for p in traces["passages"]:
+        badge = ""
+        if p.get("corrected"):
+            badge += f" <span class='corr' title='{esc(p.get('evidence',''))}'>補正</span>"
+        if p.get("suspicious"):
+            badge += f" <span class='susp' title='{esc(p.get('suspicious_note',''))}'>要確認</span>"
         src_rows.append(
             "<tr>"
             f"<td>{p['year']}-{p['month']:02d}</td>"
-            f"<td class='src'>{esc(p['source'])}</td>"
+            f"<td class='src'>{esc(p['source'])}{badge}</td>"
             f"<td>{len(p['ids'])}</td>"
             f"<td>{''.join(qchip(i) for i in p['ids'])}</td>"
             "</tr>")
@@ -144,6 +149,8 @@ td.src{font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
 td.w{font-weight:700}
 .qc{display:inline-block;background:#f1f3f8;border-radius:6px;padding:0 6px;margin:1px 3px 1px 0;font-size:11px;color:var(--sub);text-decoration:none}
 .qc:hover{color:var(--acc);background:var(--acc2)}
+.corr{display:inline-block;background:#fff3cd;color:#8a6d3b;border-radius:99px;padding:0 8px;font-size:10.5px;font-weight:700;margin-left:6px;cursor:help}
+.susp{display:inline-block;background:#ffe3e3;color:#c92a2a;border-radius:99px;padding:0 8px;font-size:10.5px;font-weight:700;margin-left:6px;cursor:help}
 .barrow{display:flex;align-items:center;gap:8px;margin:3px 0}
 .bl{width:150px;font-size:12px;color:var(--sub);text-align:right;flex:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .bar{height:12px;border-radius:6px;min-width:3px}
@@ -159,9 +166,10 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:26px;line-
 """
 
     mock = """
-<div class="card"><h2>🎯 2026-12-06 N1 模擬予想（第一版・全 8 題）</h2>
+<div class="card"><h2>🎯 2026-12-06 N1 模擬予想（第二版・全 13 問）</h2>
 <p class="lead">方法论：从 2010–2025 全部 N1 真題（2746 題）统计题型的轮换与复现，再<b>自写</b>同型模拟题。
-下列题目全部为本页自作的<b>模拟题</b>，<b>不是真題</b>，也不预测具体原题；用来校准「近期少考・格式稳定」的考点手感。</p>
+下列题目全部为本页自作的<b>模拟题</b>，<b>不是真題</b>，也不预测具体原题；用来校准「近期少考・格式稳定」的考点手感。
+（第二版追加：問題7 文章の文法・短読解）</p>
 
 <div class="mock"><span class="tag">模擬・問題1 読み方</span>
 <div class="q">彼の説明は（煩雑）で、要点がつかめない。</div>
@@ -206,6 +214,31 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:26px;line-
 彼女は ★ 欠かさず続けている。</div>
 <ol><li>どんなに</li><li>忙しくても</li><li>日本語の勉強を</li><li>毎朝</li></ol>
 <details><summary>解答・解説</summary>並べ替え：どんなに → 忙しくても → 毎朝 → 日本語の勉強を（★＝毎朝）。「どんなに〜ても」の呼応を先に固定するのが定石。</details></div>
+
+<div class="mock"><span class="tag">模擬・問題7 文章の文法</span>
+<div class="q">次の文章を読み、［A］〜［C］に入る最もよいものを選びなさい。</div>
+<p style="font-size:14px">私たちは眠っている間にも学んでいる。［A］、日中に覚えた事柄は睡眠中に整理され、
+定着しやすくなる。眠る時間を削って詰め込むほど、かえって記憶の定着を［B］しまう。
+だからといって、長く眠ればよいというものでもない。大切なのは、質のよい睡眠を［C］。</p>
+<ol><li>［A］ 1.しかし　2.つまり　3.ところが　4.そこで</li>
+<li>［B］ 1.妨げて　2.促して　3.支えて　4.補って</li>
+<li>［C］ 1.とることだ　2.とるわけだ　3.とるはずだ　4.とるものか</li></ol>
+<details><summary>解答・解説</summary>［A］2（つまり＝前文の言い換え・要約）。［B］1（定着を妨げる）。［C］1（〜ことだ＝忠告・結論）。</details></div>
+
+<div class="mock"><span class="tag">模擬・読解（短文）</span>
+<div class="q">次の文章を読んで、後の問いに答えなさい。</div>
+<p style="font-size:14px">若い頃は、失敗しないことばかり考えていた。失敗すれば恥をかき、信用を失うと思っていたからだ。
+しかし、長く仕事をしてきた今は、少し違う。失敗は、自分の思い込みを壊してくれる。
+壊れた場所から、新しいやり方が見えてくる。だから今は、失敗を避けることよりも、
+失敗から何を持ち帰るかを考えている。</p>
+<ol><li>問1　筆者の考えに最も近いものはどれか。<br>
+1.失敗しないように、慎重に行動すべきだ。<br>
+2.失敗は、新しいやり方に気づくきっかけになる。<br>
+3.失敗すると信用を失うので、避けるべきだ。<br>
+4.若い頃の考え方は、今も変わっていない。</li>
+<li>問2　「壊れた場所」とあるが、何が壊れるのか。<br>
+1.自分の思い込み　2.会社の信用　3.新しいやり方　4.若い頃の記憶</li></ol>
+<details><summary>解答・解説</summary>問1＝2（失敗→思い込みが壊れる→新しいやり方）。問2＝1（前文「自分の思い込みを壊してくれる」の照応）。</details></div>
 </div>"""
 
     page = f"""<!DOCTYPE html>
@@ -244,6 +277,21 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:26px;line-
 </details>
 </div>
 
+<div class="card"><h2>🕵️ 逆引き同定と転写清掃（実施結果）</h2>
+<table>
+<tr><th>作業</th><th>方法</th><th>結果</th></tr>
+<tr><td>未詳 65 组の自動逆引き</td><td>特徴句 30 字を実 Chrome で Yahoo! 精确短语检索し、
+結果と <b>≥12 字の連続重複</b>がある場合のみ書名『』を候補採用（<code>tools/trace_sources.py</code>）</td>
+<td><b>同定 0 组</b>。N1 読解本文は広告・書籍から<b>改変・再構成</b>されており逐字一致しないため、汎用検索では同定不能。
+今後は出典一覧を持つ専門資料・過去問解説本との照合が必要（工具は保存済み）</td></tr>
+<tr><td>明示出典の転写清掃</td><td>書誌で確証が取れた誤記のみ補正（<code>tools/clean_sources.py</code>）；未確証は「要確認」ラベル</td>
+<td><b>補正 8 件</b>：内藤廣『建築のはじまりに向かって』・吉田脩二『精神はいつ生まれたのか ヒトとサルのあいだ』・
+池上彰『〈わかりやすさ〉の勉強法』・司馬遼太郎『風塵抄』・成毛眞 ほか。要確認 3 件（OCR 崩れ等）</td></tr>
+</table>
+<div class="warn">📌 結論：<b>自動逆引きは打ち切り、手法として記録</b>。実用的な次の手は「解説本・予備校の出典一覧」との照合、
+または本文の特徴語＋著者候補の組み合わせ検索。本页では「明示出典（補正済み）」と「未詳」を区別して維持する。</div>
+</div>
+
 <div class="card"><h2>📈 傾向分析</h2>
 <p class="lead">出典著者ランキング（＝同一著者・同書が複数問にまたがる；N1 の読解は<b>現代の評論・新書・エッセイ</b>が主力）</p>
 {author_bars}
@@ -266,7 +314,7 @@ footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:26px;line-
 <tr><td>読解出典</td><td>現代評論・新書の書き下ろし的抜粋が主流；同一著者の複数回登場あり</td><td>同傾向継続。抽象度の高い随筆（教育・科学・文化）＋図表系（問題13）</td></tr>
 <tr><td>問題4 用法</td><td>見出し語の再出題は稀（3/125）＝毎回新語</td><td>二字漢語（抽象名詞）＋和語動詞のコロケーション判断が中心</td></tr>
 <tr><td>問題7 文章の文法</td><td>説明文・論説文の接続と指示詞が定点</td><td>接続表現（逆接・例示）と「この/その」の照応</td></tr>
-<tr><td>模擬題の使い方</td><td>—</td><td>上の 8 題は形式確認用。本番前に、未詳出典の逆引き補完と第 2 版（読解・問題7 含む）を追加</td></tr>
+<tr><td>模擬題の使い方</td><td>第二版 13 問（問題1/2/4/5/6＋問題7＋短読解）</td><td>形式確認用。未詳出典の自動逆引きは 0/65（改変本文のため）——専門資料との照合に切替</td></tr>
 </table>
 <div class="warn">🧪 ラベル：本页の予想は<b>統計的傾向</b>に基づく学習方針であり、出題内容の的中を保証しない。
 模擬題は自作、引用ではない。真題原文の同定は「明示出典」と「逆引き同定」を区別して記録する。</div>

@@ -131,8 +131,14 @@ python3 tools/proofread.py --bank all --apply  # 应用高精度自动修正
 
   ```bash
   python3 tools/extract_sources.py   # 読解出典行＋填空/用法 metadata → analysis/source-traces.json
-  python3 tools/build_trends.py      # → docs/trends.html
+  python3 tools/clean_sources.py     # 確証ある転写誤記のみ補正（raw/evidence 保存）；要確認ラベル
+  python3 tools/trace_sources.py     # 未詳の特徴句逆引き（Yahoo 実 Chrome；候補は要確認）
+  python3 tools/build_trends.py      # → docs/trends.html（模擬押题 第二版 13 問）
   ```
+
+- 逆引きの現実：N1 読解は広告・書籍からの**改変**が多く、精确短语检索では同定 0/65（工具は保存）。
+  今後は解説本・予備校の出典一覧との照合に切替。転写補正は確証分のみ（例：内藤廣・吉田脩二・
+  池上彰『〈わかりやすさ〉の勉強法』）で、未確証は「要確認」を維持。
 
 - 出典三层：**読解**＝题面明示的「（〜による）」行（明示 289 / 未詳 369，未詳靠逆引き检索逐步补全）；
   **填空**（問題2・5・7）与**用法**（問題4）＝作成文（不追外典；用法只统计 target 語 125 語的复现）。
