@@ -4,132 +4,223 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>JLPT N2-N5 過去問データベース</title>
+<title>JLPT N1–N5 過去問データベース</title>
 <style>
 :root{--bg:#f5f7fb;--card:#fff;--ink:#1c2333;--sub:#5b6478;--line:#e4e7f0;
---acc:#0f766e;--acc2:#e6fffa;--ok:#188a52;--okbg:#e9f7ef;--ng:#d33f49;--ngbg:#fdecee;--gold:#b8860b}
+--acc:#4f6ef7;--acc2:#eef1ff;--ok:#1f9d55;--warn:#e8590c;--err:#c92a2a}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
-background:var(--bg);color:var(--ink);min-height:100vh}
-header{background:linear-gradient(135deg,#134e4a,#0f766e);color:#fff;padding:34px 20px 46px;text-align:center}
-header h1{font-size:25px;letter-spacing:1px}
-header p{opacity:.92;font-size:14px;margin-top:8px}
+background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+header{background:linear-gradient(135deg,#33418f,#7a4ff7);color:#fff;padding:40px 20px 54px;text-align:center}
+header h1{font-size:28px;letter-spacing:2px}
+header p{opacity:.92;font-size:14.5px;margin-top:10px}
 header .tags span{display:inline-block;background:rgba(255,255,255,.22);border-radius:99px;
-padding:3px 12px;font-size:12px;margin:12px 5px 0}
-main{max-width:960px;width:100%;margin:-26px auto 0;padding:0 16px 50px}
-.panel{background:var(--card);border-radius:20px;box-shadow:0 6px 24px rgba(30,40,90,.12);padding:24px}
-.lock{max-width:420px;margin:0 auto;text-align:center}
-.lock h2{font-size:18px;margin-bottom:8px}
-.lock p{font-size:13px;color:var(--sub);margin-bottom:16px}
-.lock input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:11px 14px;font-size:15px;outline:none}
-.lock input:focus{border-color:var(--acc)}
-.lock button{margin-top:12px;width:100%;border:none;border-radius:11px;padding:12px;background:var(--acc);
-color:#fff;font-size:15px;font-weight:700;cursor:pointer}
-.lock button:disabled{opacity:.6;cursor:default}
-#err{display:none;margin-top:10px;color:var(--ng);font-size:13px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.chip{background:var(--acc2);color:var(--acc);border-radius:99px;padding:4px 13px;font-size:12.5px;font-weight:600}
-.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
-.filters select,.filters input{border:1.5px solid var(--line);border-radius:10px;padding:7px 12px;
-font-size:13px;background:#fff;color:var(--ink);outline:none}
+padding:3px 12px;font-size:12px;margin:14px 5px 0}
+main{max-width:1000px;width:100%;margin:-30px auto 0;padding:0 16px 40px;flex:1}
+.panel{background:var(--card);border-radius:20px;box-shadow:0 6px 24px rgba(30,40,90,.12);padding:22px 24px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.chip{background:var(--acc2);color:var(--acc);border-radius:99px;padding:4px 14px;font-size:12.5px;font-weight:600}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:6px}
+.filters select,.filters input,.filters button{border:1.5px solid var(--line);border-radius:10px;
+padding:7px 12px;font-size:13px;background:#fff;color:var(--ink);outline:none}
 .filters select:focus,.filters input:focus{border-color:var(--acc)}
-.filters label{font-size:13px;color:var(--sub);display:flex;align-items:center;gap:6px}
-.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
-.tab{padding:6px 15px;border-radius:99px;font-size:13px;cursor:pointer;border:1.5px solid var(--line);
-background:#fff;color:var(--sub);font-weight:600}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+.tab{padding:6px 16px;border-radius:99px;font-size:13px;cursor:pointer;border:1.5px solid var(--line);
+background:#fff;color:var(--sub);font-weight:600;transition:.15s}
 .tab.on{background:var(--acc);border-color:var(--acc);color:#fff}
 .tab .n{opacity:.7;font-size:11px;margin-left:4px}
-.count{font-size:13px;color:var(--sub);margin:8px 2px 14px}
+.count{font-size:13px;color:var(--sub);margin:10px 2px 14px}
+.qlist{display:flex;flex-direction:column;gap:16px}
 .qcard{background:var(--card);border-radius:16px;box-shadow:0 4px 16px rgba(30,40,90,.08);
-padding:18px 20px;border-left:5px solid var(--acc);margin-bottom:16px}
+padding:18px 20px;border-left:5px solid var(--c,#7a4ff7)}
 .qsrc{font-size:12px;color:var(--sub);display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:9px}
 .badge{background:var(--acc2);color:var(--acc);border-radius:99px;padding:2px 10px;font-size:11.5px;font-weight:600}
-.badge.lv{background:#f1f3f8;color:#5b6478}
-.qtext{font-size:16px;line-height:1.9;margin-bottom:12px;white-space:pre-wrap;
-font-family:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif}
-.qtext u{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:#c92a2a}
+.badge.lv{color:#fff}
+.badge.d0{background:#f6e9ff;color:#8b2ec4}.badge.d1{background:#fff1e3;color:#c2410c}.badge.d2{background:#ffe3e3;color:#c92a2a}
+.qtext{font-size:16px;line-height:1.9;margin-bottom:14px;white-space:pre-wrap}
+.qtext u{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:#c92a2a;font-weight:700}
 .opts{display:flex;flex-direction:column;gap:8px}
-.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 13px;border-radius:11px;border:1.5px solid var(--line);
-font-size:14.5px;line-height:1.7;cursor:pointer;background:#fff}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 14px;border-radius:11px;border:1.5px solid var(--line);
+font-size:14.5px;line-height:1.7;cursor:pointer;transition:.12s;background:#fff}
 .opt:hover{border-color:var(--acc)}
-.opt .k{flex:none;width:23px;height:23px;border-radius:50%;background:var(--acc2);color:var(--acc);
+.opt .k{flex:none;width:24px;height:24px;border-radius:50%;background:var(--acc2);color:var(--acc);
 display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:2px}
-.opt.correct{border-color:var(--ok);background:var(--okbg)}
+.opt.pick{border-color:var(--warn);background:#fff8f2}
+.opt.pick .k{background:var(--warn);color:#fff}
+.opt.correct{border-color:var(--ok);background:#f2fbf5}
 .opt.correct .k{background:var(--ok);color:#fff}
-.opt.wrong{border-color:var(--ng);background:var(--ngbg);opacity:.85}
-.opt.wrong .k{background:var(--ng);color:#fff}
-.explain{display:none;margin-top:12px;padding:12px 14px;background:#f7f9fd;border-radius:11px;
-font-size:13.5px;line-height:1.8;color:#38405a;border-left:3px solid var(--acc);white-space:pre-wrap}
+.opt.wrong{border-color:var(--err);background:#fff5f5;opacity:.85}
+.opt.wrong .k{background:var(--err);color:#fff}
+.explain{display:none;margin-top:13px;padding:12px 14px;background:#f7f9fd;border-radius:11px;font-size:13.5px;
+line-height:1.8;color:#38405a;border-left:3px solid var(--acc);white-space:pre-wrap}
+.explain b{color:var(--acc)}
 .explain.show{display:block}
-footer{text-align:center;color:var(--sub);font-size:12px;padding:12px 0 30px}
+.extw{color:var(--warn)!important;font-weight:700;border-bottom:1.5px dashed var(--warn);text-decoration:none;cursor:pointer}
+.extw:hover{background:#fff8f2}
+.qcard.focus{outline:3px solid var(--acc);outline-offset:2px;background:#fffdf5}
+.extm{margin-left:auto;display:flex;align-items:center;gap:8px}
+.ext{color:#fff;background:#7a4ff7!important;border-radius:99px;padding:3px 14px;font-size:11.5px;font-weight:700;
+text-decoration:none;border:1.5px solid #7a4ff7;transition:.15s;white-space:nowrap}
+.ext:hover{opacity:.85}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tags span{background:#f0f1f7;color:var(--sub);border-radius:99px;padding:2px 10px;font-size:11.5px}
+.empty{padding:60px 20px;text-align:center;color:var(--sub)}
+.switch{display:inline-flex;align-items:center;gap:8px;margin-left:auto;font-size:13px;color:var(--sub);cursor:pointer}
+.ck{width:38px;height:20px;border-radius:99px;background:var(--line);position:relative;transition:.15s;flex:none}
+.ck i{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:.15s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.ck.on{background:var(--acc)} .ck.on i{left:20px}
+footer{text-align:center;font-size:12px;color:var(--sub);padding:18px;line-height:1.8}
+
+#lock{position:fixed;inset:0;z-index:99;display:flex;align-items:center;justify-content:center;
+background:linear-gradient(135deg,#2c3470,#5b3ec0);}
+.lockbox{background:#fff;border-radius:22px;padding:38px 36px;width:min(380px,88vw);text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.lockbox .logo{font-size:44px}
+.lockbox h2{margin:14px 0 4px;font-size:20px;letter-spacing:1px;color:var(--ink)}
+.lockbox p{font-size:12.5px;color:var(--sub);margin-bottom:22px;line-height:1.7}
+.lockbox input{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;font-size:15px;text-align:center;outline:none}
+.lockbox input:focus{border-color:var(--acc)}
+.lockbox button{width:100%;margin-top:12px;padding:13px;border:none;border-radius:12px;font-size:15px;font-weight:700;
+background:linear-gradient(135deg,#33418f,#7a4ff7);color:#fff;cursor:pointer}
+.lockbox button:disabled{opacity:.5;cursor:wait}
+.lockbox .err{display:none;color:var(--err);font-size:13px;margin-top:10px}
+.lockbox .hint{margin-top:14px;font-size:11px;color:#a8aebc}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid #fff;border-top-color:transparent;
+border-radius:50%;animation:sp 0.7s linear infinite;vertical-align:-2px;margin-right:6px}
+@keyframes sp{to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
 <header>
-  <h1>JLPT N2-N5 過去問データベース</h1>
-  <p>文字・語彙 / 文法 / 読解 — 出典つき・暗号化配信</p>
-  <div class="tags" id="mtags"></div>
+  <h1>JLPT N1–N5 ・ 過去問データベース</h1>
+  <p>2010–2025 過去問 5751 題 · N1 / N2–N5 合并单站 · 按级别 / 年份 / 题型筛选 · 密码保护</p>
+  <div class="tags"><span id="mspan">収録年份 -</span><span id="mcount">加载中…</span><span id="mlevels"></span><span>AES-256 加密</span></div>
 </header>
-<main>
-  <div class="panel lock" id="lock">
-    <h2>🔐 输入访问密码</h2>
-    <p>题目数据以 AES-256-GCM 加密，仅作个人学习用途。</p>
-    <input id="pw" type="password" placeholder="访问密码" autocomplete="off">
-    <button id="unlockBtn">解锁题库</button>
-    <div id="err"></div>
-  </div>
-  <div id="app" style="visibility:hidden">
-    <div class="panel" style="margin-bottom:16px">
-      <div class="chips" id="chips"></div>
-      <div class="tabs" id="tabs"></div>
-      <div class="filters">
-        <select id="fYear"><option value="">全部年份</option></select>
-        <select id="fType"><option value="">全部题型</option></select>
-        <input id="fTag" placeholder="关键词（题干/解析）" style="flex:1;min-width:150px">
-        <label><input type="checkbox" id="selfTest" checked> 自测模式（先选项后答案）</label>
-      </div>
-      <div class="count" id="count"></div>
-      <div id="list"></div>
+
+<main id="app" style="visibility:hidden">
+  <div class="panel">
+    <div class="chips" id="schips"></div>
+    <div class="tabs" id="tabs"></div>
+    <div class="filters">
+      <select id="fYear"><option value="">全部年份</option></select>
+      <select id="fType"><option value="">全部题型</option></select>
+      <input id="fTag" placeholder="搜索题目 / 标签 / 考点…" style="flex:1;min-width:180px">
+      <label class="switch" title="自测模式：作答后才显示答案与解析">
+        <span>自测模式</span><span class="ck" id="modeCk"><i></i></span>
+      </label>
     </div>
+    <div class="count" id="count"></div>
   </div>
+  <div class="qlist" id="qlist" style="margin-top:18px"></div>
+  <div class="empty" id="empty" style="display:none">没有符合条件的题目</div>
 </main>
-<footer>jlpt-question-bank · 数据来源：公开学习站点的考生回忆整理 · 保留出处 · 离线/加密</footer>
+
+<footer>合并自 JLPT N1 / N2–N5 题库 · 在线内容经 AES-256-GCM 加密 · 仅供本人备考学习使用 · 请勿传播真题内容</footer>
+
+<div id="lock">
+  <div class="lockbox">
+    <div class="logo">🔐</div>
+    <h2>JLPT N1–N5 题库登录</h2>
+    <p>本站内容仅供本人学习使用。<br>请输入访问密码以解密题库。</p>
+    <input id="pw" type="password" placeholder="访问密码" autocomplete="off">
+    <div class="err" id="err">密码错误，请重新输入</div>
+    <button id="unlockBtn">解锁题库</button>
+    <details class="hint"><summary>📖 公开学习材料：N1 全27场 語注・例句集（免密，语汇/文法/读解/聴解）→</summary>
+      <div style="line-height:1.9">
+        <a href="vocab-words.html" style="color:var(--acc)">2024年7月　全66問・含聴解（基准页）→</a><br>
+        <a href="vocab-words-2025-07.html" style="color:var(--acc)">2025年7月 →</a><br>
+        <a href="vocab-words-2024-12.html" style="color:var(--acc)">2024年12月 →</a><br>
+        <a href="vocab-words-2023-07.html" style="color:var(--acc)">2023年7月 →</a><br>
+        <a href="vocab-words-2022-12.html" style="color:var(--acc)">2022年12月 →</a><br>
+        <a href="vocab-words-2022-07.html" style="color:var(--acc)">2022年7月 →</a><br>
+        <a href="vocab-words-2021-12.html" style="color:var(--acc)">2021年12月 →</a><br>
+        <a href="vocab-words-2020-12.html" style="color:var(--acc)">2020年12月 →</a><br>
+        <a href="vocab-words-2019-12.html" style="color:var(--acc)">2019年12月 →</a><br>
+        <a href="vocab-words-2019-07.html" style="color:var(--acc)">2019年7月 →</a><br>
+        <a href="vocab-words-2018-12.html" style="color:var(--acc)">2018年12月 →</a><br>
+        <a href="vocab-words-2018-07.html" style="color:var(--acc)">2018年7月 →</a><br>
+        <a href="vocab-words-2017-12.html" style="color:var(--acc)">2017年12月 →</a><br>
+        <a href="vocab-words-2016-12.html" style="color:var(--acc)">2016年12月 →</a><br>
+        <a href="vocab-words-2016-07.html" style="color:var(--acc)">2016年7月 →</a><br>
+        <a href="vocab-words-2015-12.html" style="color:var(--acc)">2015年12月 →</a><br>
+        <a href="vocab-words-2015-07.html" style="color:var(--acc)">2015年7月 →</a><br>
+        <a href="vocab-words-2014-12.html" style="color:var(--acc)">2014年12月 →</a><br>
+        <a href="vocab-words-2014-07.html" style="color:var(--acc)">2014年7月 →</a><br>
+        <a href="vocab-words-2013-12.html" style="color:var(--acc)">2013年12月 →</a><br>
+        <a href="vocab-words-2013-07.html" style="color:var(--acc)">2013年7月 →</a><br>
+        <a href="vocab-words-2012-12.html" style="color:var(--acc)">2012年12月 →</a><br>
+        <a href="vocab-words-2012-07.html" style="color:var(--acc)">2012年7月 →</a><br>
+        <a href="vocab-words-2011-12.html" style="color:var(--acc)">2011年12月 →</a><br>
+        <a href="vocab-words-2011-07.html" style="color:var(--acc)">2011年7月 →</a><br>
+        <a href="vocab-words-2010-12.html" style="color:var(--acc)">2010年12月 →</a><br>
+        <a href="vocab-words-2010-07.html" style="color:var(--acc)">2010年7月 →</a>
+      </div>
+    </details>
+    <div class="hint">密码见本地 docs/.secret.txt（tools/encrypt.py 维护）</div>
+  </div>
+</div>
 
 <script>
+const SECTION_LABEL={vocab:'語彙',grammar:'文法',reading:'読解',listening:'聴解'};
+const SECTION_COLOR={vocab:'#e8590c',grammar:'#2f9e44',reading:'#1971c2',listening:'#e03131'};
+const LEVEL_LABEL={n1:'N1',n2:'N2',n3:'N3',n4:'N4',n5:'N5'};
+const LEVEL_COLOR={n1:'#7a4ff7',n2:'#0f766e',n3:'#1971c2',n4:'#b8860b',n5:'#e8590c'};
+const DIFF={easy:['d0','易'],medium:['d1','中'],hard:['d2','難']};
 const TYPEMAP={
- 'vocab-reading':'漢字読み','vocab-writing':'表記','vocab-context':'文脈規定','vocab-paraphrase':'言い換え','vocab-usage':'語彙用法',
- 'grammar-choice':'文法選択','grammar-composition':'文の並べ替え','grammar-passage':'文章の文法',
- 'reading-short':'短文読解','reading-mid':'中文読解','reading-long':'長文読解',
+ 'vocab-reading':'読み方(文字)','vocab-writing':'表記','vocab-context':'文脈規定(語彙)','vocab-paraphrase':'言い換え','vocab-usage':'語彙用法',
+ 'grammar-usage':'文脈規定(文法)','grammar-choice':'文法選択','grammar-composition':'文の並べ替え','grammar-passage':'文章の文法',
+ 'grammar-fill':'文法填空',
+ 'reading':'読解','reading-short':'短文読解','reading-mid':'中文読解','reading-long':'長文読解',
  'listening-point':'課題理解','listening-grammar':'ポイント理解','listening-overview':'概要理解',
- 'listening-detailed':'即時応答','listening-implication':'統合理解'
+ 'listening-detailed':'即時応答','listening-implication':'統合理解',
+ 'unknown':'未分類'
 };
-const LEVEL_LABEL={n2:'N2',n3:'N3',n4:'N4',n5:'N5'};
 const b64toBuf=b=>Uint8Array.from(atob(b),c=>c.charCodeAt(0)).buffer;
+const MATPAGE=(y,m)=>'vocab-words'+((y!==2024||m!==7)?('-'+y+'-'+String(m).padStart(2,'0')):'')+'.html';
+
 const $=id=>document.getElementById(id);
-let QUESTIONS=[],curLevel='all',curYear='',curType='',curTag='',selfTest=true;
+let QUESTIONS=[];
+let curLevel='all', curYear='', curType='', curTag='', selfTest=true;
+
+function typeKey(q){return q.level==='n1'?(q.section+'-'+q.type):(q.type||'unknown');}
+function typeLabel(key){
+  if(TYPEMAP[key])return TYPEMAP[key];
+  const m=/^(問題\d+)-fill$/.exec(key);
+  return m?(m[1]+' 填空'):key;
+}
 
 async function boot(){
   try{
     const meta=await (await fetch('index-meta.json')).json();
-    $('mtags').innerHTML=`<span>${meta.total} 題</span><span>正解 ${meta.answered}</span><span>${meta.span}</span>`
-      +Object.entries(meta.by_level||{}).map(([k,v])=>`<span>${LEVEL_LABEL[k]||k} ${v}</span>`).join('');
+    if(meta.total!==undefined){
+      $('mspan').textContent='収録 '+meta.span;
+      $('mcount').textContent=meta.total+' 題（正解 '+meta.answered+'）';
+      $('mlevels').innerHTML=Object.entries(meta.by_level||{}).sort()
+        .map(([k,v])=>`<span>${LEVEL_LABEL[k]||k} ${v}</span>`).join('');
+    }
   }catch(e){}
   $('unlockBtn').addEventListener('click',go);
   $('pw').addEventListener('keydown',e=>{if(e.key==='Enter')go();});
   $('pw').focus();
 }
+
 async function go(){
-  const pass=$('pw').value.trim(); if(!pass)return;
-  const btn=$('unlockBtn');btn.disabled=true;btn.textContent='解密中…';$('err').style.display='none';
+  const pass=$('pw').value.trim();
+  if(!pass)return;
+  const btn=$('unlockBtn'); btn.disabled=true; btn.innerHTML='<span class="spin"></span>解密中…'; $('err').style.display='none';
   try{
     QUESTIONS=await unlock(pass);
-    $('lock').style.display='none';$('app').style.visibility='visible';
+    $('lock').style.display='none';
     buildUI();
+    const h=decodeURIComponent(location.hash.replace(/^#/,''));
+    if(h.startsWith('q=')) jumpTo(h.slice(2));
   }catch(E){
-    $('err').textContent=(E.message==='wrong'?'密码错误，请重新输入':'解密失败：'+E.message);
-    $('err').style.display='block';btn.disabled=false;btn.textContent='解锁题库';
+    $('err').textContent = E.message==='wrong' ? '密码错误，请重新输入' : '解密失败：'+E.message;
+    $('err').style.display='block';
+    btn.disabled=false; btn.textContent='解锁题库';
   }
 }
+
 async function unlock(pass){
   const bin=await (await fetch('data.json')).json();
   const salt=b64toBuf(bin.salt),iv=b64toBuf(bin.iv),ct=b64toBuf(bin.ct);
@@ -137,78 +228,163 @@ async function unlock(pass){
   const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt,iterations:bin.iter,hash:'SHA-256'},km,256);
   const key=await crypto.subtle.importKey('raw',bits,{name:'AES-GCM'},false,['decrypt']);
   let pt;
-  try{pt=await crypto.subtle.decrypt({name:'AES-GCM',iv,additionalData:new TextEncoder().encode('jlpt-n2n5-qb')},key,ct);}
+  try{pt=await crypto.subtle.decrypt({name:'AES-GCM',iv,additionalData:new TextEncoder().encode('jlpt-qb')},key,ct);}
   catch(e){throw new Error('wrong');}
   return JSON.parse(new TextDecoder().decode(pt)).questions;
 }
+
+function applyFilters(q){
+  if(curLevel!=='all'&&q.level!==curLevel)return false;
+  if(curYear&&String(q.year)!==curYear)return false;
+  if(curType&&typeKey(q)!==curType)return false;
+  if(curTag){
+    const hay=(q.question+' '+(q.target||'')+' '+(q.tags||[]).join(' ')+' '+(q.explanation||'')+' '+(q.source||'')).toLowerCase();
+    if(!hay.includes(curTag.toLowerCase()))return false;
+  }
+  return true;
+}
+
 function buildUI(){
-  const lv={};QUESTIONS.forEach(q=>{lv[q.level]=(lv[q.level]||0)+1;});
-  $('chips').innerHTML=`<span class="chip">总计 ${QUESTIONS.length} 題</span>`+
-    Object.keys(lv).sort().map(l=>`<span class="chip">${LEVEL_LABEL[l]||l} ${lv[l]}</span>`).join('');
-  $('tabs').innerHTML=`<span class="tab on" data-l="all">全部</span>`+
-    Object.keys(lv).sort().map(l=>`<span class="tab" data-l="${l}">${LEVEL_LABEL[l]||l}<span class="n">${lv[l]}</span></span>`).join('');
+  $('app').style.visibility='visible';
+  const lv={};
+  QUESTIONS.forEach(q=>{lv[q.level]=(lv[q.level]||0)+1;});
+  const order=['n1','n2','n3','n4','n5'].filter(l=>lv[l]);
+  $('schips').innerHTML=`<span class="chip" style="color:#7a4ff7">总计 ${QUESTIONS.length} 題</span>`+
+    order.map(l=>`<span class="chip" style="color:${LEVEL_COLOR[l]||'#4f6ef7'}">${LEVEL_LABEL[l]||l} ${lv[l]}</span>`).join('');
+
+  $('tabs').innerHTML=`<span class="tab on" data-l="all">全部<span class="n">${QUESTIONS.length}</span></span>`+
+    order.map(l=>`<span class="tab" data-l="${l}">${LEVEL_LABEL[l]||l}<span class="n">${lv[l]}</span></span>`).join('');
   document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
     document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
-    t.classList.add('on');curLevel=t.dataset.l;render();});
-  const years=[...new Set(QUESTIONS.map(q=>q.year))].sort((a,b)=>b-a);
+    t.classList.add('on');curLevel=t.dataset.l;render();
+  });
+
+  const years=[...new Set(QUESTIONS.map(q=>q.year).filter(Boolean))].sort((a,b)=>b-a);
   $('fYear').innerHTML='<option value="">全部年份</option>'+years.map(y=>`<option>${y}</option>`).join('');
-  const types=[...new Set(QUESTIONS.map(q=>q.type))].sort();
-  $('fType').innerHTML='<option value="">全部题型</option>'+types.map(t=>`<option value="${t}">${TYPEMAP[t]||t}</option>`).join('');
+  const types=[...new Set(QUESTIONS.map(typeKey))].sort();
+  $('fType').innerHTML='<option value="">全部题型</option>'+types.map(t=>`<option value="${t}">${typeLabel(t)}</option>`).join('');
+
   $('fYear').onchange=e=>{curYear=e.target.value;render();};
   $('fType').onchange=e=>{curType=e.target.value;render();};
-  $('fTag').oninput=e=>{curTag=e.target.value.trim().toLowerCase();render();};
-  $('selfTest').onchange=e=>{selfTest=e.target.checked;render();};
+  $('fTag').oninput=e=>{curTag=e.target.value.replace(/^\s+|\s+$/g,'');render();};
+  $('modeCk').onclick=()=>{selfTest=!selfTest;$('modeCk').classList.toggle('on',selfTest);render();};
+  $('modeCk').classList.add('on');
   render();
 }
-function filtered(){
-  return QUESTIONS.filter(q=>{
-    if(curLevel!=='all'&&q.level!==curLevel)return false;
-    if(curYear&&String(q.year)!==curYear)return false;
-    if(curType&&q.type!==curType)return false;
-    if(curTag){
-      const hay=(q.question+' '+(q.target||'')+' '+(q.explanation||'')+' '+(q.source||'')).toLowerCase();
-      if(!hay.includes(curTag))return false;
-    }
-    return true;
-  });
+
+function ansIndex(a){a=String(a||'').toUpperCase();
+ if(/^[1-4]$/.test(a))return Number(a)-1;
+ if(/^[A-D]$/.test(a))return a.charCodeAt(0)-65;return -1;}
+function keyLabel(i){return String(i+1);}
+
+function listenTag(q){
+  const m=/問題(\d)\((\d+)\)/.exec(q.source||'');
+  return m?`t${m[1]}${('0'+m[2]).slice(-2)}`:'';
 }
-function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function card(q){
-  const ans=q.answer; // 1-based or null
-  const opts=(q.options||[]).map((o,i)=>{
-    const k=String.fromCharCode(65+i);
-    return `<div class="opt" data-i="${i}" data-ok="${ans&&i===ans-1?1:0}"><span class="k">${k}</span><span>${esc(o)}</span></div>`;
-  }).join('');
-  const exp=q.explanation?`<div class="explain">${esc(q.explanation)}</div>`:'';
-  const ansBadge=ans?`<span class="badge">正解 ${ans}${q.answer_text?'・'+esc(q.answer_text):''}</span>`:'<span class="badge lv">答案未定</span>';
-  return `<div class="qcard">
-    <div class="qsrc"><span class="badge lv">${LEVEL_LABEL[q.level]||q.level}</span>
-      <span class="badge">${q.year}年${q.month}月</span>
-      <span class="badge">${TYPEMAP[q.type]||q.type}</span>
-      <span>${esc(q.source||'')}</span>${ansBadge}</div>
-    <div class="qtext">${esc(q.question||'').replace(/（\s*）|\(\s*\)/g,'<u>　　</u>')}</div>
-    <div class="opts">${opts}</div>${exp}
-  </div>`;
+
+function card(q,idx){
+  const lvBadge=`<span class="badge lv" style="background:${LEVEL_COLOR[q.level]||'#7a4ff7'}">${LEVEL_LABEL[q.level]||q.level||'?'}</span>`;
+  const src=`${q.year}年${q.month}月 · ${typeLabel(typeKey(q))} · 第${q.number}題`;
+  const d=q.difficulty?DIFF[q.difficulty]:null;
+  const tags=(q.tags||[]).map(t=>`<span>#${t}</span>`).join('');
+  const num=Number(q.number);
+  const isN1=q.level==='n1';
+  const is2024=isN1&&(q.year===2024 && (q.month===7||q.month===12));
+  const isMat= is2024 && q.section==='vocab'
+    && ((q.type==='reading' && [1,2,3,4,5,6].indexOf(num)>-1)
+     || (q.type==='context' && [7,8,9,10,11,12,13].indexOf(num)>-1));
+  const hasExt= is2024 && (
+       (q.section==='vocab' && ((q.type==='reading'&&num>=1&&num<=6)
+        ||(q.type==='context'&&num>=7&&num<=13)
+        ||(q.type==='paraphrase'&&num>=14&&num<=19)
+        ||(q.type==='usage'&&num>=20&&num<=25)))
+    || (q.section==='grammar' && num>=26&&num<=44)
+    || (q.section==='reading' && num>=45&&num<=66)
+    || (q.section==='listening' && q.year===2024&&q.month===7));
+  const matPage=MATPAGE(q.year,q.month);
+  const ext= hasExt?`<a class="ext" href="${matPage}#${q.section==='listening'?listenTag(q):'q'+num}" target="_blank" title="跳转到对应小问的学习材料">📖 扩展</a>`:'';
+  const opts=(q.options||['','','','']).map((o,i)=>
+    `<div class="opt" data-i="${i}" data-ok="${ansIndex(q.answer)===i?1:0}">`+
+    `<span class="k">${keyLabel(i)}</span><span class="tx">${escapeHtml(o)}</span></div>`).join('');
+  const ansBadge=q.answer
+    ?`<span class="badge">正解 ${escapeHtml(String(q.answer))}${q.answer_text?'・'+escapeHtml(q.answer_text):''}</span>`
+    :'<span class="badge">答案未定</span>';
+  const div=document.createElement('div');
+  div.className='qcard';
+  div.dataset.id=q.id;
+  div.style.setProperty('--c',SECTION_COLOR[q.section]||LEVEL_COLOR[q.level]||'#7a4ff7');
+  div.innerHTML=
+    `<div class="qsrc">${lvBadge}<span class="badge">${src}</span>`+
+    (d?`<span class="badge ${d[0]}">难度·${d[1]}</span>`:'')+
+    ansBadge+`<span class="extm">${ext}</span></div>`+
+    `<div class="qtext">${targetHtml(q.question,q.target,isMat,q)}</div>`+
+    `<div class="opts">${opts}</div>`+
+    `<div class="explain"><b>答案 ${q.answer||'?'}</b>　${escapeHtml(q.explanation||'')}</div>`+
+    (tags?`<div class="tags">${tags}</div>`:'')+
+    `<div class="qsrc" style="margin-top:10px;margin-bottom:0">${escapeHtml(q.source||'')}</div>`;
+  if(!selfTest){
+    const ex=div.querySelector('.explain');ex.classList.add('show');
+    div.querySelectorAll('.opt').forEach(o=>{if(o.dataset.ok=='1')o.classList.add('correct');});
+  }else{
+    div.querySelectorAll('.opt').forEach(o=>o.addEventListener('click',()=>{
+      if(div.dataset.done)return; div.dataset.done='1';
+      o.classList.add('pick');
+      const ans=div.querySelector(`.opt[data-ok="1"]`);
+      setTimeout(()=>{
+        o.classList.remove('pick');
+        if(ans!==o){o.classList.add('wrong');}
+        ans.classList.add('correct');
+        const ex=div.querySelector('.explain');ex.classList.add('show');
+        if(o===ans)ex.querySelector('b').textContent='✓ '+q.answer;
+      },350);
+    }));
+  }
+  return div;
 }
-function reveal(cardEl){
-  cardEl.querySelectorAll('.opt').forEach(o=>{if(o.dataset.ok==='1')o.classList.add('correct');});
-  const exp=cardEl.querySelector('.explain');if(exp)exp.classList.add('show');
+
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+function targetHtml(text,target,link,q){
+  let s=escapeHtml(text||'');
+  s=s.replace(/（[\s\u3000]*）|\([\s\u3000]*\)/g,'<u>　　</u>');
+  if(!target) return s;
+  const t=escapeHtml(target);
+  const r=new RegExp(t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+  if(link){
+    const matPage=(q&&q.year)?MATPAGE(q.year,q.month):'vocab-words.html';
+    return s.replace(r, `<a class="extw" href="${matPage}#w-${encodeURIComponent(target)}" target="_blank" title="查看词条卡片"><u>${t}</u></a>`);
+  }
+  return s.replace(r, `<u>${t}</u>`);
 }
+
 function render(){
-  const list=filtered();
-  $('count').textContent=`共 ${list.length} 題（正解 ${list.filter(q=>q.answer).length}）`;
-  $('list').innerHTML=list.map(card).join('');
-  document.querySelectorAll('.qcard').forEach(c=>{
-    c.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{
-      if(!selfTest)return;
-      c.querySelectorAll('.opt').forEach(x=>x.classList.remove('wrong'));
-      if(o.dataset.ok==='1')o.classList.add('correct');
-      else{o.classList.add('wrong');c.querySelector('[data-ok="1"]').classList.add('correct');}
-      reveal(c);
-    });
-    if(!selfTest)reveal(c);
-  });
+  const list=QUESTIONS.filter(applyFilters);
+  $('count').textContent=`显示 ${list.length} / ${QUESTIONS.length} 題`;
+  $('qlist').innerHTML='';
+  $('empty').style.display=list.length?'none':'block';
+  const frag=document.createDocumentFragment();
+  list.forEach((q,i)=>frag.appendChild(card(q,i)));
+  $('qlist').appendChild(frag);
 }
+
+function jumpTo(id){
+  const q=QUESTIONS.filter(x=>x.id===id)[0];
+  if(!q)return null;
+  curLevel=q.level; curYear=String(q.year);
+  curType=typeKey(q); curTag='';
+  $('tabs').querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.l===curLevel));
+  $('fYear').value=curYear; $('fType').value=curType; $('fTag').value='';
+  render();
+  let el=null, tries=0;
+  const iv=setInterval(()=>{
+    el=document.querySelector('.qcard[data-id="'+CSS.escape(id)+'"]');
+    if(el){clearInterval(iv); el.classList.add('focus'); el.scrollIntoView({behavior:'smooth',block:'center'});
+      setTimeout(()=>el.classList.remove('focus'),3000);}
+    else if(++tries>20){clearInterval(iv);}
+  },80);
+  return q;
+}
+
 boot();
 </script>
 </body>
