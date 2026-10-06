@@ -1,7 +1,12 @@
-# AGENTS.md — jlpt-question-bank（N2-N5）作业守则
+# AGENTS.md — jlpt-question-bank（N1–N5 合并）作业守则
 
-本仓库为 **JLPT N2-N5 本地真题资料库**，供课件（如 `wago-atlas`）做维度抽取与练习。
-规则从 `../jlpt-n1-question-bank/AGENTS.md` 精简而来。
+本仓库为 **JLPT N1–N5 本地真题资料库**，供课件（如 `wago-atlas` / `japanese-learning`）做维度抽取与练习。
+原独立仓库 `jlpt-n1-question-bank` 已全历史并入本仓库 `n1/` 子树（2026-10，git subtree），
+规则沿用并合并两库约定；旧 N1 仓库仅保留跳转 Pages。
+
+- N1 正本：`n1/past-exams/<year>/<month>/<category>/*.json`（`n1/AGENTS.md` 为原 N1 守则，仍然有效）
+- N2–N5 正本：`past-exams/<level>/<year>/<month>/<type>/<NN>.json`
+- 唯一 Pages：`docs/`（N1–N5 合并加密站，`tools/encrypt.py` 生成）
 
 ## 1. 数据原则
 
@@ -26,11 +31,15 @@
 ## 4. 命令
 
 ```bash
-python3 tools/collect.py --inventory   # 刷新会话清单
+python3 tools/collect.py --inventory   # 刷新会话清单（N2–N5）
 python3 tools/collect.py --download    # 抓取缺失页（限速）
-python3 tools/parse_all.py             # refs → parsed
-python3 tools/build_bank.py            # parsed → past-exams
+python3 tools/parse_all.py             # refs → parsed（N2–N5）
+python3 tools/build_bank.py            # parsed → past-exams（N2–N5）
+python3 tools/encrypt.py               # N1–N5 合并加密 → docs/data.json（唯一 Pages）
+python3 tools/proofread.py --bank all  # N1＋N2–N5 全库校对
 ```
+
+N1 的抓取/解析/校对工具在 `n1/tools/`（沿用原 `jlpt-n1-question-bank` 的用法）。
 
 ## 5. Git
 

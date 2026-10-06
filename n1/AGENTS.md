@@ -1,5 +1,10 @@
 # AGENTS.md — Working Rules for Agents in This Repository
 
+> **Note (2026-10)**：本目录原为独立仓库 `jlpt-n1-question-bank`，已全历史并入
+> `jlpt-question-bank` 的 `n1/` 子树。以下原 N1 守则继续适用于 `n1/` 内的一切工作；
+> 仓库级规则见上一级 `../AGENTS.md`。唯一 Pages 为合并站
+> <https://syu-toutousai.github.io/jlpt-question-bank/>（`../docs/`，由 `../tools/encrypt.py` 生成）。
+
 This file defines how agents must behave when working in this repository.
 Follow these rules strictly; they override generic behavior.
 

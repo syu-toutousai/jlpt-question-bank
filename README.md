@@ -1,56 +1,41 @@
-# jlpt-question-bank（N2-N5 本地真题库）
+# jlpt-question-bank（JLPT N1–N5 本地真题库）
 
-JLPT **N2 / N3 / N4 / N5** 过去问的本地资料库：每题存题干、选项、正解、中文解析与出处
-（级别·年度·月份·問題番号），供 `wago-atlas`（和語アトラス）等课件做「大和言葉」维度的
-抽取、观测与练习。
+JLPT **N1 / N2 / N3 / N4 / N5** 过去问的本地资料库：每题存题干、选项、正解、中文解析与出处
+（级别·年度·月份·問題番号），供 `wago-atlas`（和語アトラス）、`japanese-learning`
+（koou / karada 课件）等做维度抽取、观测与练习。
 
-- **N1 另见**：`../jlpt-n1-question-bank/`（2010-2025 全量，已有点读站与加密 Pages）。
+- **唯一线上入口**：<https://syu-toutousai.github.io/jlpt-question-bank/>
+  （AES-256-GCM 密码门；N1–N5 合并单站，级别 Tab＋年份/题型/关键词筛选＋自测模式）
+- 旧 N1 站 <https://syu-toutousai.github.io/jlpt-n1-question-bank/> 已改为**跳转卡**，
+  原 `vocab-words*.html` 深链以跳转页保留（指向新站同页）。
+- **规模**：5751 題（N1 2746・N2 1111・N3 1257・N4 304・N5 333），正解 5362，收录 2010–2025。
 - 本仓库**本地优先**：先把能找到的真题页全部抓回 `refs/` 存档，再离线解析，不依赖现场翻找。
 
-## 数据源
-
-| 源 | 内容 | 覆盖 |
-|---|---|---|
-| **jlptzhen.com** | 語彙・文法 25 問/回，带站方正解＋中文解析；部分回次为全卷（~100 問） | N2 30 回・N3 28 回・N4 5 回・N5 4 回（2010-2025） |
-| **jlpt247.com** | 逐题转写全卷（无答案） | N2/N3 多回、N4/N5 少数（2015-2025） |
-| **trynihongo.com** | 有年份标注的 N2/N3 全卷页＋N4/N5 成套页（存档于 `refs/trynihongo/`），答案可用 `check_single_question_ajax` 逐题判定（待抽取） | N2/N3 2010-2024；N4/N5 sets |
-
-## 现状（2026-10）
-
-```
-75 sessions = N2 30 + N3 28 + N4 9 + N5 8
-3005 questions, 1911 answered（正解あり）
-```
-
-- **語彙+文法（問題1-5）**：jlptzhen 基本全覆盖，答案/解析完整；
-- **読解・並べ替え・文章の文法**：jlpt247 有逐题转写，答案多数待补
-  （trynihongo 存档已就位，抽答案脚本见 TODO）；
-- 少数 jlpt247 "更新公告"页（0 Q）与 jlptzhen 全卷回次需单独处理。
+> 沿革：N1 部分原为独立仓库 `jlpt-n1-question-bank`；2026-10 以 `git subtree`
+> 方式**全历史并入本仓库 `n1/`**，两库合并为一个题库 repo（一个 Pages 入口）。
 
 ## 目录
 
 ```
+├── past-exams/            # N2–N5 题库正本：<level>/<year>/<month>/<type>/<NN>.json【本地・gitignore】
+├── parsed/                # N2–N5 解析后的源 bundle【本地】
+├── refs/                  # N2–N5 原始 HTML 存档【本地】
 ├── sessions.json          # collect.py 生成的会话×源清单
-├── refs/                  # 原始 HTML 存档（jlptzhen/jlpt247 + trynihongo/）
-├── parsed/                # 解析后的源 bundle（每题含 stem/options/answer/explanation）
-├── past-exams/            # 题库正本：<level>/<year>/<month>/<type>/<NN>.json
-│   └── manifest.json      # 覆盖与答案统计
 ├── manifest.json          # 各会话的源级统计
+├── n1/                    # N1 子树（原 jlpt-n1-question-bank，历史完整并入）
+│   ├── past-exams/<year>/<month>/<category>/*.json    # N1 正本【本地】
+│   ├── question-bank/{by-type,by-year,by-theme}/      # N1 按题型/年份/主题整理副本【本地】
+│   ├── analysis/  guides/  tools/  local/  data/      # 分析・指南・工具（tracked）
+│   └── refs/                                          # N1 原始档【本地】
+├── docs/                  # 唯一 Pages：合并加密站（index.html + data.json + index-meta.json）
+│   └── vocab-words*.html  # N1 公开学习材料 27 页（免密，词条卡直链目标）
 └── tools/
-    ├── collect.py         # sitemap → sessions.json → refs/ 全量下载
-    ├── parse_all.py       # refs/ → parsed/（+ manifest.json）
-    ├── build_bank.py      # parsed/ → past-exams/（跨源合并答案）
-    ├── extract_trynihongo.py  # 答案逐题判定（--shard k/n 并行；checkpoint 到 refs/answers_trynihongo/）
-    ├── enrich_answer_opts.py  # 从归档 HTML 离线补选项文本
-    ├── apply_trynihongo.py    # 抽取答案 → past-exams/（题干+选项双路匹配）
-    ├── harvest_pools.py       # jlptzhen 随机池重复采集（每次抽样不同）
-    ├── apply_pools.py         # 池题答案 → past-exams/（题干+选项匹配）
-    ├── merge_tryni_pool.py    # 无年份 trynihongo 答案并入池（供 apply_pools 用）
-    ├── fetch_jlptzhen.py  # 单页解析器（改编自 N1 仓库）
-    └── fetch_jlpt247.py   # 单页解析器（改编自 N1 仓库）
+    ├── encrypt.py         # 合并加密：N2–N5 + N1 → docs/data.json（AAD=jlpt-qb）
+    ├── proofread.py       # N1＋N2–N5 全库校对（BANKS 指向 past-exams 与 n1/past-exams）
+    └── ...（N2–N5 抓取/解析/答案回填工具，见下）
 ```
 
-每题 JSON 字段（与 N1 仓库 `past-exams/` 同形，便于抽取器复用）：
+每题 JSON 字段（两子树同形，便于抽取器共用）：
 
 ```jsonc
 {
@@ -68,8 +53,36 @@ JLPT **N2 / N3 / N4 / N5** 过去问的本地资料库：每题存题干、选�
 ```
 
 `answer: null` = 有转写但正解未确定（`verified.status = "transcript-only"`）。
+N1 的 `answer` 为字符串（`"3"`/`"C"`），N2–N5 为 1-based 整数——合并站前端两者皆可解析。
 
-## 重建
+## Pages（合并加密站）
+
+```bash
+python3 tools/encrypt.py          # 收集 N2–N5 + N1 → AES-256-GCM → docs/data.json + index-meta.json
+python3 tools/encrypt.py --show   # 查看当前站点密码（本地 docs/.secret.txt）
+git add docs tools README.md AGENTS.md && git commit && git push
+```
+
+站内：一个密码门 → 级别 Tab（N1–N5）＋年份/题型/筛选＋自测模式；N1 2024 年题目可
+直达 `vocab-words*.html` 词条材料。明文题目绝不提交，只推送 `docs/`。
+
+## N1（n1/ 子树）
+
+- 源：N1 2010-07〜2025-07 全量 2746 題（語彙・文法・読解・聴解），用户录入＋比照校对，
+  `source` 注明年份·月份·問題番号；解析/抓取工具见 `n1/tools/`。
+- 正本 `n1/past-exams/<year>/<month>/<category>/*.json`；`n1/question-bank/` 为
+  by-type / by-year / by-theme 整理视图（与正本同 id，加密时自动去重）。
+- 本地全量透明版（不加密）开发服务器：`n1/tools/serve.py`（仅绑 127.0.0.1）。
+
+## N2–N5 数据源
+
+| 源 | 内容 | 覆盖 |
+|---|---|---|
+| **jlptzhen.com** | 語彙・文法 25 問/回，带站方正解＋中文解析；部分回次为全卷（~100 問） | N2 30 回・N3 28 回・N4 5 回・N5 4 回（2010-2025） |
+| **jlpt247.com** | 逐题转写全卷（无答案） | N2/N3 多回、N4/N5 少数（2015-2025） |
+| **trynihongo.com** | 有年份标注的 N2/N3 全卷页＋N4/N5 成套页（存档于 `refs/trynihongo/`），答案可用 `check_single_question_ajax` 逐题判定 | N2/N3 2010-2024；N4/N5 sets |
+
+## N2–N5 重建
 
 ```bash
 python3 tools/collect.py --inventory     # 刷新会话清单（读两站 sitemap）
@@ -84,8 +97,9 @@ python3 tools/apply_trynihongo.py        # 回填答案（可反复跑）
 
 ## 状态（2026-10）
 
-- **正解率**：2616 / 3005（N2 1017/1111・N3 1162/1257・N4 225/304・N5 212/333）。
-- trynihongo 抽取已覆盖 N3 2010-2024 全卷；N2 仍在后台进行（`extract_trynihongo.py --shard`）。
+- **合并后规模**：5751 題（N1 2746・N2 1111・N3 1257・N4 304・N5 333），正解 5362。
+- N2–N5 正解率：2616 / 3005（N2 1017/1111・N3 1162/1257・N4 225/304・N5 212/333）；
+  trynihongo 抽取已覆盖 N3 2010-2024 全卷，N2 仍在后台进行。
 - N3 的 trynihongo 页只转写到読解前（约 38-39 問/回），其后読解答案需其他来源。
 
 ## TODO
@@ -98,13 +112,13 @@ python3 tools/apply_trynihongo.py        # 回填答案（可反复跑）
 ## 校对（proofread）
 
 ```bash
-python3 tools/proofread.py --bank all          # 只扫描出报告
+python3 tools/proofread.py --bank all          # 只扫描出报告（N1＋N2–N5）
 python3 tools/proofread.py --bank all --apply  # 应用高精度自动修正
 ```
 
-覆盖 N1＋N2-N5 全部题目：兼容汉字、站方题号标注、汉字间空格、简体/旧字→日本新字体、
-大つ/大や行→小写、已知混淆对、半角括号归一、开头句点等；不确定的一律只报告不改。
-结果见 [`PROOFREAD.md`](./PROOFREAD.md)（含残留待人工复核清单）。
+覆盖兼容汉字、站方题号标注、汉字间空格、简体/旧字→日本新字体、大つ/大や行→小写、
+已知混淆对、半角括号归一、开头句点等；不确定的一律只报告不改。结果见
+[`PROOFREAD.md`](./PROOFREAD.md)（含残留待人工复核清单）。
 
 ⚠️ `past-exams/` 是从 `parsed/` 生成的：若重跑 `build_bank.py`，请随后重跑
 `proofread.py --apply`，否则修正会被覆盖。
@@ -115,17 +129,3 @@ python3 tools/proofread.py --bank all --apply  # 应用高精度自动修正
 - **使用方针（用户判定）**：在真题或改写练习中**打乱顺序、重建为观测维度**并
   **注明出处（年份·级别）**的引用方式，不涉及版权问题；可以引用并做成练习，
   也可以把阅读里出现的语言现象做成选择题。所有引用一律保留来源标注。
-
-## GitHub Pages（加密站点）
-
-明文题目（`past-exams/`、`parsed/`、`refs/`）**绝不提交**，只推送加密后的 `docs/`：
-
-```bash
-python3 tools/encrypt.py          # 收集 past-exams → AES-256-GCM → docs/data.json
-python3 tools/encrypt.py --show   # 查看当前站点密码（本地 docs/.secret.txt）
-git add docs tools README.md AGENTS.md && git commit && git push
-```
-
-站点：`https://syu-toutousai.github.io/jlpt-question-bank/`（Pages 源＝main /docs），
-打开后输入密码，浏览器内解密，支持 级别/年份/题型/关键词 过滤与自测模式。
-答案回填后重新 encrypt+push 即更新。

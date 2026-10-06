@@ -17,7 +17,7 @@ from collections import Counter
 from pathlib import Path
 
 BANKS = {
-    "n1": Path("/home/naruto/scratch/jlpt-n1-question-bank/past-exams"),
+    "n1": Path("/home/naruto/scratch/jlpt-question-bank/n1/past-exams"),
     "n2n5": Path("/home/naruto/scratch/jlpt-question-bank/past-exams"),
 }
 
