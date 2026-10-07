@@ -23,6 +23,12 @@
 - **kana-size**：大つ・大や行 → 小写（しまつた→しまった 等 31 处）
 - **known-confusion**：段落级确证错字（進字→進学・育ちににくい→育ちにくい・そっちのけでで→そっちのけで 等）
 - **halfwidth-paren**：半角括号与全角混用且合并计数平衡 → 统一全角
+
+### 追补（2026-10-07）
+
+| 规则 | 处数 | 说明 |
+|---|---|---|
+| known-confusion（雤→雨） | 6 | 2015-12 読解 問題9 転写の OCR 誤字「熱帯雤林」→「熱帯雨林」（mid_56/57/58 の各 2 カ所）。`CONFUSIONS` に追加済み。past-exams は非公開のため、対外成果物 wago-atlas は `extract_exams.py` 再抽で反映（data/exams/fukushi・setsuzoku の ctx_after 各 1 カ所）。|
 - **leading-dot**：题干开头多余句点
 
 ## 残留待人工复核（未自动改，避免误伤）
